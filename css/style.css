@@ -1316,19 +1316,25 @@ html {
 @media (max-width: 1440px) {
   .pulse {
     width: 140px;
-    height: 150px;
+    height: 140px;
   }
 }
 @media (max-width: 1099px) {
   .pulse {
     width: 120px;
-    height: 150px;
+    height: 120px;
   }
 }
 @media (max-width: 767px) {
   .pulse {
     width: 100px;
     height: 100px;
+  }
+}
+@media (max-width: 567px) {
+  .pulse {
+    width: 85px;
+    height: 85px;
   }
 }
 
@@ -1372,7 +1378,6 @@ html {
 }
 
 section {
-  min-height: 100vh;
   height: auto;
   width: 100vw;
   display: flex;
@@ -1405,6 +1410,10 @@ section {
   background-color: rgb(255, 255, 255);
 }
 
+.hero {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 .hero .container {
   height: 100%;
   width: 100%;
@@ -1434,11 +1443,31 @@ section {
 .hero .ui-button-rounded {
   right: 48px;
 }
+@media (max-width: 1099px) {
+  .hero .ui-button-rounded {
+    right: 24px;
+    bottom: 24px;
+  }
+}
+@media (max-width: 567px) {
+  .hero .ui-button-rounded {
+    right: 12px;
+    bottom: 12px;
+    font-size: 11px !important;
+    padding: 10px;
+  }
+}
 
 .portfolio {
   position: relative;
   overflow: hidden;
   min-height: unset !important;
+}
+@media (max-width: 700px) {
+  .portfolio {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 .portfolio h2 {
   font-family: var(--font-family);
@@ -1448,9 +1477,9 @@ section {
   color: var(--black);
   margin: 56px 0 100px 0;
 }
-@media (max-width: 467px) {
+@media (max-width: 767px) {
   .portfolio h2 {
-    margin: 40px 0 80px 0;
+    margin: 0px 0 60px 0;
   }
 }
 .portfolio .ui-button-primary {
@@ -2082,8 +2111,9 @@ section {
   overflow-x: hidden;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 700px) {
   .services {
+    padding-top: 40px;
     padding-bottom: 40px;
   }
 }
@@ -2093,7 +2123,7 @@ section {
   font-size: 56px;
   text-transform: uppercase;
   color: var(--1);
-  margin: 56px 0 12px 0;
+  margin: 0px 0 12px 0;
 }
 .services__container {
   position: relative;
@@ -2333,6 +2363,7 @@ section {
 @media (max-width: 700px) {
   .about-index {
     padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 .about-index h2 {
@@ -2587,6 +2618,12 @@ section {
 
 .reviews {
   background-color: #242424;
+}
+@media (max-width: 700px) {
+  .reviews {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
 .reviews h2 {
   font-family: var(--font-family);

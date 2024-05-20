@@ -241,15 +241,19 @@ section {
 
 	@media (max-width:1440px) {
 		width: 140px;
-		height: 150px;
+		height: 140px;
 	}
 	@media (max-width:1099px) {
 		width: 120px;
-		height: 150px;
+		height: 120px;
 	}
 	@media (max-width:767px) {
 		width: 100px;
 		height: 100px;
+	}
+	@media (max-width:567px) {
+		width: 85px;
+		height: 85px;
 	}
 	
 }
@@ -297,7 +301,7 @@ section {
 	width: 100%;
   }
   section {
-	min-height: 100vh;
+	// min-height: 100vh;
 	height: auto;
 	width: 100vw;
 	display: flex;
@@ -306,6 +310,8 @@ section {
 	justify-content: center;
 	overflow: auto;
 	box-sizing: border-box;
+
+
   }
   .first { background-image: url(../img/hero-bg.jpg); background-size: cover; background-position: center; }
   .second { background-color: rgb(255, 255, 255); }
@@ -323,6 +329,11 @@ section {
 
 // <--- --- hero section --- --->
 .hero {
+	
+		padding-top: 40px;
+		padding-bottom: 40px;
+	
+
 	.container {
 		height: 100%;
 		width: 100%;
@@ -356,6 +367,16 @@ section {
 
 	.ui-button-rounded {
 		right: 48px;
+		@media (max-width:1099px) {
+			right: 24px;
+			bottom: 24px;
+		}
+		@media (max-width:567px) {
+			right: 12px;
+			bottom: 12px;
+			font-size: 11px !important;
+			padding: 10px;
+		}
 	}
 }
 
@@ -364,6 +385,11 @@ section {
 	position: relative;
 	overflow: hidden;
 	min-height: unset !important;
+
+	@media (max-width:700px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	h2 {
 		font-family: var(--font-family);
@@ -374,8 +400,8 @@ section {
 		
 		margin: 56px 0 100px 0;
 
-		@media (max-width:467px) {
-			margin: 40px 0 80px 0;
+		@media (max-width:767px) {
+			margin: 0px 0 60px 0;
 		}
 	}
 
@@ -1053,7 +1079,8 @@ section {
 // <--- --- services section --- --->
 .services {
 
-	@media (max-width:767px) {
+	@media (max-width:700px) {
+		padding-top: 40px;
 		padding-bottom: 40px;
 	}
 
@@ -1064,7 +1091,7 @@ section {
 		text-transform: uppercase;
 		color: var(--1);		
 		
-		margin: 56px 0 12px 0;
+		margin: 0px 0 12px 0;
 	}
 	&__container {
 		position: relative;
@@ -1375,6 +1402,7 @@ section {
 
 	@media (max-width:700px) {
 		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 
 	h2 {
@@ -1634,6 +1662,11 @@ section {
 
 // <--- --- reviews section --- --->
 .reviews {
+
+	@media (max-width:700px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
 
 	background-color: #242424;
 
