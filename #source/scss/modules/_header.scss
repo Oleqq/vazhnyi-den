@@ -79,6 +79,16 @@
 
                     @media (max-width:1440px) {
                         color: #000;
+                        font-size: 24px;
+                    }
+                    @media (max-width:1280px) {
+                        font-size: 22px;
+                    }
+                    @media (max-width:1099px) {
+                        font-size: 20px;
+                    }
+                    @media (max-width:767px) {
+                        font-size: 18px;
                     }
 
                     &:hover {
@@ -232,6 +242,12 @@
 	display: flex;
 	align-items: center;
 	margin: 0;
+
+    @media (max-width:1440px) {
+        display: flex;
+       
+        margin-top: 60px;
+    }
 }
 
 .nav__item:not(:first-child) {
@@ -322,10 +338,40 @@
 	z-index: 0;
 	opacity: 0;
 	visibility: hidden;
+
+    transition: 1s ease;
 }
 
 .lock {
 	overflow: hidden;
+}
+
+.nav__logo-mobile {
+    display: none;
+    @media (max-width:1440px) {
+        display: flex;
+        margin-bottom: 24px;
+    }
+}
+
+.nav__tel-mobile {
+    display: none;
+
+    a {
+        width: fit-content;
+        height: fit-content;
+
+        &:not(:first-of-type) {
+            margin-top: 16px;
+            font-weight: 500;
+            font-family: var(--second-family);
+        }
+    }
+
+    @media (max-width:1440px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 @media (max-width: 1440px) {
@@ -357,6 +403,19 @@
 		transform: translateX(-150vw);
 		overflow-x: hidden;
 		overflow-y: auto;
+
+        transition: 1s ease;
+
+        border-radius: 0 18px 18px 0;
+
+        @media (max-width:1280px) {
+            border-radius: 0 32px 32px 0;
+        }
+
+        &.open {
+            transform: translateX(0);
+            transition: all .6s;
+        }
 	}
 
 	.nav__list {
@@ -373,6 +432,7 @@
 		width: 100%;
 		padding: 0;
 		position: static;
+        margin-bottom: 24px;
 	}
 
 	.nav__link,
@@ -383,7 +443,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border-bottom: 1px solid #bfbfbf;
+
 	}
 
 	.nav__link::after {
@@ -429,10 +489,7 @@
 		transition: all 0.3s;
 	}
 
-	.nav.open {
-		transform: translateX(0);
-		transition: all 0.3s;
-	}
+	
 
 	.overlay.open {
 		opacity: 1;
@@ -465,4 +522,5 @@
 
 .overlay.open {
     display: block;
+    transition: 1s ease;
 }
