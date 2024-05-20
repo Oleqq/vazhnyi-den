@@ -81,6 +81,86 @@ const swiper = new Swiper('.portfolio__slider', {
   
 
 
+
+
+
+  const ReviewsSwiper = new Swiper('.reviews__slider', {
+	direction: 'horizontal',
+	
+	spaceBetween: 32,
+	speed: 700,
+    slidesPerView: 4,
+	navigation: {
+	  nextEl: '.reviews__slider-button-next',
+	  prevEl: '.reviews__slider-button-prev',
+	},
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+
+    breakpoints: {
+        1660: {
+            spaceBetween: 32,
+            slidesPerView: 4,
+        },
+        1440: {
+            spaceBetween: 16,
+            slidesPerView: 4,
+        },
+        1280: {
+            slidesPerView: 4,
+        },
+        1099: {
+            slidesPerView: 4,  
+        },
+        991: {
+            slidesPerView: 3,
+            spaceBetween: 8,
+        },
+        767: {
+            slidesPerView: 3,
+        },
+        567: {
+            slidesPerView: 2,
+        },
+        467: {
+            slidesPerView: 2,
+        },
+        390: {
+            slidesPerView: 1,
+
+            loop: true,
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            spaceBetween: -100,
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 800,
+                modifier: 1,
+                slideShadows: false
+            },
+
+        },
+        0: {
+            slidesPerView: 1,
+            spaceBetween: 8,
+        },
+    },
+
+	// autoplay: {
+	//   delay: 5000,
+	//   disableOnInteraction: false,
+	// },
+  });
+
+
+
+
+
+
   document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section');
     const navLi = document.querySelectorAll('.fixed-menu ul li');
