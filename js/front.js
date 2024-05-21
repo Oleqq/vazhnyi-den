@@ -1,4 +1,28 @@
 
+// var videoSlider = new Swiper('.video-slider', {
+//   direction: 'horizontal',
+//   loop: false,
+//   navigation: {
+//     nextEl: '.video-slider-button-next',
+//     prevEl: '.video-slider-button-prev',
+//   },
+//   on: {
+//     transitionStart: function() {
+//       var videos = document.querySelectorAll('video');
+//       videos.forEach(function(video) {
+//         video.pause();
+//       });
+//     },
+//     transitionEnd: function() {
+//       var activeIndex = this.activeIndex;
+//       var activeSlide = this.slides[activeIndex];
+//       var activeSlideVideo = activeSlide.querySelector('video');
+//       if (activeSlideVideo) {
+//         activeSlideVideo.play();
+//       }
+//     }
+//   }
+// });
 
 
 
@@ -219,7 +243,65 @@ const swiper = new Swiper('.portfolio__slider', {
 
 
 
+  document.addEventListener('DOMContentLoaded', () => {
+    var videoSlider = new Swiper('.video-slider', {
+      direction: 'horizontal',
+      loop: false,
+      navigation: {
+        nextEl: '.video-slider-button-next',
+        prevEl: '.video-slider-button-prev',
+      },
+      on: {
+        transitionStart: function() {
+          var videos = document.querySelectorAll('video');
+          videos.forEach(function(video) {
+            video.pause();
+          });
+        },
+        transitionEnd: function() {
+          var activeIndex = this.activeIndex;
+          var activeSlide = this.slides[activeIndex];
+          var activeSlideVideo = activeSlide.querySelector('video');
+          if (activeSlideVideo) {
+            activeSlideVideo.play();
+          }
+        }
+      }
+    });
 
+    document.getElementById('play-video-button').addEventListener('click', function() {
+      var activeIndex = videoSlider.activeIndex;
+      var activeSlide = videoSlider.slides[activeIndex];
+      var activeSlideVideo = activeSlide.querySelector('video');
+      if (activeSlideVideo) {
+        activeSlideVideo.play();
+      }
+      this.classList.add('hidden');
+    });
+  });
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const videoBlocks = document.querySelectorAll(".video-block");
+
+    videoBlocks.forEach(block => {
+        const playButton = block.querySelector(".play-button");
+        const video = block.querySelector(".video-mobile");
+
+        playButton.addEventListener("click", function() {
+            // Запустить видео
+            video.play().then(() => {
+                // Скрыть кнопку после начала воспроизведения
+                playButton.classList.add("hidden");
+            }).catch(error => {
+                console.error("Error attempting to play the video:", error);
+            });
+        });
+    });
+});
 
 
 
