@@ -1,0 +1,187 @@
+.footer {
+    background-color: #242424;
+    padding: 30px 0 !important;
+
+    @media (max-width:700px) {
+		padding: 40px 20px !important;
+
+	}
+	@media (max-width:467px) {
+		padding: 20px 16px !important;
+	}
+
+    a {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: -0.03em;
+        color: var(--white);
+        text-decoration: none;
+
+        @media (max-width:1440px) {
+            font-size: 18px !important;
+        }
+        @media (max-width:1099px) {
+            font-size: 14px !important;
+        }
+        @media (max-width:991px) {
+            font-size: 12px !important;
+        }
+
+    }
+
+    p {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 160%;
+        letter-spacing: -0.03em;
+        color: var(--white);
+
+        @media (max-width:1440px) {
+            font-size: 18px !important;
+        }
+        @media (max-width:1099px) {
+            font-size: 14px !important;
+        }
+        @media (max-width:991px) {
+            font-size: 12px !important;
+        }
+    }
+
+    &__container {
+
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width:767px) {
+            flex-direction: column;
+            align-items: flex-start;    
+        }
+    }   
+
+    &__logo {
+        @media (max-width:767px) {
+            margin-bottom: 24px;
+        }
+        @media (max-width:467px) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 16px;
+
+        a {
+            text-decoration: none;
+
+            width: fit-content;
+            height: fit-content;
+
+            transition: .2s ease;
+
+            &:hover {
+                transition: .2s ease;
+
+                svg {
+                    transition: .2s ease;
+                    path {
+                        &:first-of-type {
+                            transition: .2s ease;
+                            fill: #c2a959;
+                        }
+                        &:not(:first-of-type) {
+                            transition: .2s ease;
+                            fill: #fff;
+                        }
+                    }
+                    
+                }
+                svg {
+                    &:last-of-type {
+                       path:first-of-type {
+                        transition: .2s ease;
+                        fill: #c2a959 !important;
+                       }
+                    }
+                }
+            }
+
+            svg {
+                transition: .2s ease;
+
+                @media (max-width:1440px) {
+                    width: 42px;
+                    height: 42px;
+                }
+                @media (max-width:1099px) {
+                    width: 32px;
+                    height: 32px;
+                }
+
+                path {
+                    transition: .2s ease;
+                }
+            }
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        &.alt {
+            display: flex;
+            gap: 32px;
+            @media (max-width:1660px) {
+                gap: 24px;
+            }
+            @media (max-width:1440px) {
+                gap: 12px;
+            }
+        }
+        &.column {
+            flex-direction: column;
+            align-items: flex-start;
+            a {
+                border-bottom: 1px solid #fff;
+                line-height: 100%;
+                transition: .2s ease;
+
+                &:hover {
+                    transition: .2s ease;
+                    border-color: transparent;
+                    color: #c2a959 ;
+                }
+            }
+
+            
+        }
+        &.tel {
+            gap: 12px;
+            a {
+                font-family: var(--second-family);
+            }
+
+            svg {
+                @media (max-width:1440px) {
+                    width: 42px;
+                    height: 42px;
+                }
+                @media (max-width:1099px) {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            
+        }
+    }
+}

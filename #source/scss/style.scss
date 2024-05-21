@@ -5,6 +5,9 @@
 @import "modules/animation.scss";
 
 @import "modules/header";
+@import "modules/footer";
+
+
 
 .container {
 	max-width: 1440px;
@@ -2667,6 +2670,65 @@ section {
 		@media (max-width:1440px) {
 			width: 59%;
 		}
+	}
+}
+
+
+
+.team-about {
+
+	
+
+	&__container {
+
+		margin-top: 120px;
+
+		@media (max-width:567px) {
+			margin-top: 0;
+		}
+		
+
+		h2 {
+			font-family: var(--font-family);
+			font-weight: 700;
+			font-size: 56px;
+			line-height: 100%;
+			text-transform: uppercase;
+			color: #000;
+			
+			margin: 56px 0 0px 0;
+	
+			@media (max-width:767px) {
+				margin: 56px 0 0px 0;
+			}
+			@media (max-width:467px) {
+				font-size: 24px !important;
+			}
+			@media (max-width:390px) {
+				font-size: 20px !important;
+
+			}
+		}
+	
+		p {
+			font-family: var(--font-family);
+			font-weight: 400;
+			font-size: 22px;
+			color: var(--black);
+		}
+	
+		img {
+			width: 100%;
+			object-fit: cover;
+
+			@media (max-width:467px) {
+				display: none;
+			}
+		}
+
+	}
+	&__wrapper {
+		margin-top: 56px;
 	}
 }
 
