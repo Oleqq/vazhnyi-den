@@ -2,6 +2,7 @@
 
 
 
+
 const swiper = new Swiper('.portfolio__slider', {
 	direction: 'horizontal',
 	loop: true,
@@ -97,7 +98,9 @@ const swiper = new Swiper('.portfolio__slider', {
 
     let myTeamSwiperNav = new Swiper(TeamSliderNav, {
       slidesPerView: 3,
+      spaceBetween: 60,
       speed: 500,
+      
       watchSlidesVisibility: true,
       watchSlidesProgress: true,
       direction: 'horizontal',
@@ -106,8 +109,44 @@ const swiper = new Swiper('.portfolio__slider', {
         clickable: true,
       },
       navigation: {
-        nextEl: '.team-nav-slider__button-next',
-        prevEl: '.team-nav-slider__button-prev',
+        nextEl: '',
+        prevEl: '',
+      },
+
+      breakpoints: {
+        2560: {
+
+        },
+        1660: {
+
+        },
+        1440: {
+         spaceBetween: 68,
+         slidesPerView: 4,
+        },
+        1280: {
+          spaceBetween: 60,
+          slidesPerView: 3,
+        },
+        1099: {
+
+        },
+        991: {
+          spaceBetween: 45,
+        },
+        800: {
+          spaceBetween: 35,
+        },
+        700: {
+          spaceBetween: 20,
+        },
+        567: {
+          spaceBetween: 15,
+          slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 2,
+        },
       },
     });
 
@@ -115,19 +154,22 @@ const swiper = new Swiper('.portfolio__slider', {
       spaceBetween: 10,
       slidesPerView: 1,
       speed: 500,
+      // effect: 'coverflow',
+      allowTouchMove: false,
       pagination: {
         el: '.team-description-slider__pagination',
         clickable: true,
       },
       navigation: {
-        nextEl: '.team-description-slider__button-next',
-        prevEl: '.team-description-slider__button-prev',
+        nextEl: '',
+        prevEl: '',
       },
     });
 
     let myTeamSwiper = new Swiper(TeamSlider, {
       spaceBetween: 10,
       slidesPerView: 1,
+      effect: 'coverflow',
       speed: 500,
       pagination: {
         el: '.team-slider__pagination',
