@@ -8,6 +8,147 @@
 @import "modules/footer";
 
 
+@import "modules/portfolio";
+
+
+
+// стили хлебных крошек
+// breadcrumbs 
+.breadcrumbs {
+
+    font-family: var(--font-family);
+	font-weight: 500;
+	font-size: 18px;
+	color: #fff;
+
+    list-style: none;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    // flex-wrap: wrap;
+
+    gap: 10px;
+    row-gap: 1rem;
+
+    
+    @media (max-width:1440px) {
+        width: 100%;
+
+    }
+    @media (max-width:991px) {
+
+    }
+    @media (max-width:767px) {
+
+    }
+	@media (max-width:700px) {
+		padding: 0 24px;
+	}
+    @media (max-width:567px) {
+
+      
+    }
+    @media (max-width:467px) {
+        padding: 0 16px;
+      font-size: 16px;
+    }
+    @media (max-width:420px) {
+        font-size: 14px;
+    }
+    @media (max-width:375px) {
+        font-size: 12px;
+    }
+
+
+    &__container {
+		width: 100%;
+
+		position: absolute;
+
+        z-index: 5;
+        top: 160px;
+
+		@media (max-width:567px) {
+			top: 94px;
+		}
+
+        nav {
+
+
+            @media (max-width:1660px) {
+                justify-content: flex-start;
+            }
+            
+        }
+    }
+
+    li {
+        width: fit-content;
+
+        &:last-of-type {
+            
+            
+
+            background-color: unset;
+
+            @media (max-width:991px) {
+                width: 100%;
+                flex: unset;
+            }
+
+            img {
+                
+            }
+
+            a {
+                
+            }
+        }
+    }
+    
+
+    a {
+        
+        line-height: 32px !important;
+        text-decoration: none;
+		color: #fff;
+        transition: .2s ease;
+        
+
+        @media (max-width:991px) {
+            line-height: unset !important;
+        }
+        
+
+        &:hover {
+            transition: .2s ease;
+            color: #C2A959;
+            text-shadow: 0 0 .75px #C2A959; /* Тень текста */
+
+            border: none;
+        }
+    }
+  
+    &__item {
+      display: flex;
+      gap: 10px;
+      transition: .2s ease-in;
+    }
+    &__item:hover {
+        transition: .2s ease-in;
+    }
+    &__divider {
+      
+    }
+    &__current {
+        font-weight: bold;
+    }
+
+  }
+
+
 
 .container {
 	max-width: 1440px;

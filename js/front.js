@@ -523,3 +523,93 @@ document.addEventListener('click', (e) => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// страница портфолио
+document.addEventListener('DOMContentLoaded', function() {
+  const button = document.getElementById('portfolio-hero__video-button');
+  const thumbnail = document.querySelector('.portfolio-hero__video-thumbnail');
+  const video = document.querySelector('.video');
+
+  button.addEventListener('click', function() {
+      thumbnail.classList.add('hidden');
+      button.classList.add('hidden');
+      video.classList.add('visible'); // предположим, что класс 'visible' делает видео видимым
+      video.play();
+  });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.portfolio-hero__slider', {
+    direction: 'horizontal',
+    loop: true,
+    freeMode: true,
+    freeModeSticky: false, // Убедитесь, что это значение false
+    slidesPerView: 6,
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {
+      nextEl: '.portfolio__slider-button-next',
+      prevEl: '.portfolio__slider-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    breakpoints: {
+      2560: {
+        slidesPerView: 6, // Установите количество слайдов для разрешения 2560px
+      },
+      1660: {
+        slidesPerView: 5,
+      },
+      1440: {
+        slidesPerView: 5,
+      },
+      1280: {
+        slidesPerView: 4,
+      },
+      1099: {
+        slidesPerView: 4,
+      },
+      991: {
+        slidesPerView: 4,
+      },
+      767: {
+        slidesPerView: 4,
+      },
+      676: {
+        slidesPerView: 3,
+      },
+      567: {
+        slidesPerView: 3,
+      },
+      467: {
+        slidesPerView: 2,
+      },
+      0: {
+        slidesPerView: 2, // Установите количество слайдов для начального разрешения
+      },
+    }
+  });
+});
