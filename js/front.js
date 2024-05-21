@@ -84,6 +84,113 @@ const swiper = new Swiper('.portfolio__slider', {
 
 
 
+
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const TeamSlider = document.querySelector('.team-slider');
+    const TeamSliderDescription = document.querySelector('.team-description-slider');
+    const TeamSliderNav = document.querySelector('.team-nav-slider');
+
+    let myTeamSwiperNav = new Swiper(TeamSliderNav, {
+      slidesPerView: 3,
+      speed: 500,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+      direction: 'horizontal',
+      pagination: {
+        el: '.team-nav-slider__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.team-nav-slider__button-next',
+        prevEl: '.team-nav-slider__button-prev',
+      },
+    });
+
+    let myTeamSwiperDescription = new Swiper(TeamSliderDescription, {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      speed: 500,
+      pagination: {
+        el: '.team-description-slider__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.team-description-slider__button-next',
+        prevEl: '.team-description-slider__button-prev',
+      },
+    });
+
+    let myTeamSwiper = new Swiper(TeamSlider, {
+      spaceBetween: 10,
+      slidesPerView: 1,
+      speed: 500,
+      pagination: {
+        el: '.team-slider__pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.team-slider__button-next',
+        prevEl: '.team-slider__button-prev',
+      },
+      thumbs: {
+        swiper: myTeamSwiperNav,
+      },
+    });
+
+    // Add click event to the navigation slides
+    myTeamSwiperNav.slides.forEach((slide, index) => {
+      slide.addEventListener('click', () => {
+        myTeamSwiper.slideToLoop(index);
+        myTeamSwiperDescription.slideToLoop(index);
+      });
+    });
+
+    // Update active class for navigation slides when the main slider changes
+    myTeamSwiper.on('slideChange', () => {
+      const activeIndex = myTeamSwiper.realIndex;
+      myTeamSwiperNav.slides.forEach(slide => slide.classList.remove('swiper-slide-active'));
+      myTeamSwiperNav.slides[activeIndex].classList.add('swiper-slide-active');
+      myTeamSwiperDescription.slideToLoop(activeIndex);
+    });
+
+    // Synchronize main slider with navigation slider changes
+    myTeamSwiperNav.on('slideChange', () => {
+      const activeIndex = myTeamSwiperNav.realIndex;
+      myTeamSwiper.slideToLoop(activeIndex);
+      myTeamSwiperDescription.slideToLoop(activeIndex);
+    });
+
+    // Synchronize main slider with description slider changes
+    myTeamSwiperDescription.on('slideChange', () => {
+      const activeIndex = myTeamSwiperDescription.realIndex;
+      myTeamSwiper.slideToLoop(activeIndex);
+      myTeamSwiperNav.slideToLoop(activeIndex);
+    });
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const ReviewsSwiper = new Swiper('.reviews__slider', {
 	direction: 'horizontal',
 	

@@ -3143,4 +3143,45 @@ section {
     opacity: 0.5;
   }
 }
+
+.team img {
+  width: 100%;
+  object-fit: cover;
+}
+.team__wrapper {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+}
+.team-slider {
+  overflow: hidden;
+  z-index: 10;
+}
+.team-slider__wrapper {
+  display: flex;
+  max-width: 1000px;
+}
+.team-slider img {
+  width: 100%;
+  object-fit: cover;
+}
+.team-description-slider {
+  z-index: 10;
+  overflow: hidden;
+}
+.team-description-slider__wrapper {
+  max-width: 1000px;
+}
+.team-nav-slider {
+  overflow: hidden;
+  z-index: 10;
+}
+.team-nav-slider__wrapper {
+  max-width: 1000px;
+}
+
+.member__about {
+  display: flex;
+  flex-direction: column;
+}
 /*# sourceMappingURL=style.css.map */
