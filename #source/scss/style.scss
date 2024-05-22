@@ -62,6 +62,15 @@
     }
 
 
+	&.secondary {
+		color: #242424;
+		background-color: black;
+
+		a {
+			color: #242424;
+		}
+	}
+
     &__container {
 		width: 100%;
 
