@@ -613,3 +613,99 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+// страница услуг
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.services-cta__slider', {
+    direction: 'horizontal',
+    
+    slidesPerView: 1,
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    // },
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {
+      nextEl: '.services-cta__button-next',
+      prevEl: '.services-cta__button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    
+  });
+});
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const ServicesPriceSlider = document.querySelector('.services-price-slider');
+  const ServicesPriceSliderNav = document.querySelector('.services-price-nav');
+
+  let ServicesPriceNav = new Swiper(ServicesPriceSliderNav, {
+    slidesPerView: 'auto',
+    speed: 500,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    direction: 'vertical',
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+
+  let ServicesPrice = new Swiper(ServicesPriceSlider, {
+    spaceBetween: 10,
+    speed: 500,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    thumbs: {
+      swiper: ServicesPriceNav,
+    },
+  });
+
+  // Add click event to the navigation slides
+  ServicesPriceNav.slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+      ServicesPrice.slideToLoop(index);
+    });
+  });
+
+  // Update active class for navigation slides when the main slider changes
+  ServicesPrice.on('slideChange', () => {
+    const activeIndex = ServicesPrice.realIndex;
+    ServicesPriceNav.slides.forEach(slide => slide.classList.remove('swiper-slide-active'));
+    ServicesPriceNav.slides[activeIndex].classList.add('swiper-slide-active');
+  });
+
+  // Synchronize main slider with navigation slider changes
+  ServicesPriceNav.on('slideChange', () => {
+    const activeIndex = ServicesPriceNav.realIndex;
+    ServicesPrice.slideToLoop(activeIndex);
+  });
+
+});
