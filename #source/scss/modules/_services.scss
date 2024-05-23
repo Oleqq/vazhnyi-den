@@ -71,6 +71,11 @@
             @media (max-width:467px) {
                 padding: 0 16px;
             }
+
+
+            .ui-button-primary {
+                text-decoration: none;
+            }
             
         }
 
@@ -253,6 +258,8 @@
 
     // cta секция
     &-cta {
+
+        padding: 0;
 
         @media (max-width:700px) {
             padding-bottom: 48px;
