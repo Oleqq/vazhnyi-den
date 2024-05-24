@@ -3965,6 +3965,16 @@ html {
     object-position: -100px;
   }
 }
+@media (max-width: 467px) {
+  .about-founder__img img {
+    object-position: -167px;
+  }
+}
+@media (max-width: 375px) {
+  .about-founder__img img {
+    object-position: -200px;
+  }
+}
 .about-founder__badge {
   display: flex;
   flex-direction: column;
