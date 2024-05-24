@@ -4033,10 +4033,10 @@ html {
   background-color: var(--golden-light-golden);
   margin-bottom: 32px;
 }
-@media (max-width: 700px) {
+@media (max-width: 1099px) {
   .about-team {
-    padding-top: 220px;
-    padding-bottom: 220px;
+    padding-top: 0;
+    padding-bottom: 170px;
   }
 }
 @media (max-width: 676px) {
