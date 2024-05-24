@@ -709,3 +709,95 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+
+
+
+
+
+
+// страница услуг 2
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.services-style__slider', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    // },
+    spaceBetween: 32,
+    speed: 500,
+    navigation: {
+      nextEl: '.services-style__button-next',
+      prevEl: '.services-style__button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    on: {
+      slideChange: function() {
+        updateClasses({
+          $el: document.querySelector('.services-style__slider'),
+          slides: document.querySelectorAll('.services-style__slider .swiper-slide'),
+          activeIndex: swiper.activeIndex
+        });
+      }
+    }
+  });
+
+  function updateClasses({ $el, slides, activeIndex }) {
+    // Удаляем класс 'swiper-slide-prev-prev' у всех элементов
+    Array.from($el.querySelectorAll('.swiper-slide-prev-prev')).forEach(function(element) {
+      element.classList.remove('swiper-slide-prev-prev');
+    });
+
+    // Добавляем класс 'swiper-slide-prev-prev' к нужному элементу
+    if (slides[activeIndex - 2]) {
+      slides[activeIndex - 2].classList.add('swiper-slide-prev-prev');
+    }
+
+    // Удаляем класс 'swiper-slide-next-next' у всех элементов
+    Array.from($el.querySelectorAll('.swiper-slide-next-next')).forEach(function(element) {
+      element.classList.remove('swiper-slide-next-next');
+    });
+
+    // Добавляем класс 'swiper-slide-next-next' к нужному элементу
+    if (slides[activeIndex + 2]) {
+      slides[activeIndex + 2].classList.add('swiper-slide-next-next');
+    }
+  }
+
+  // Инициализируем классы при загрузке
+  updateClasses({
+    $el: document.querySelector('.services-style__slider'),
+    slides: document.querySelectorAll('.services-style__slider .swiper-slide'),
+    activeIndex: swiper.activeIndex
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.services-reviews__slider', {
+    direction: 'horizontal',
+    
+    slidesPerView: 1,
+    // autoplay: {
+    //   delay: 2000,
+    //   disableOnInteraction: false,
+    // },
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {
+      nextEl: '.services-reviews__button-next',
+      prevEl: '.services-reviews__button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+
+    
+  });
+});

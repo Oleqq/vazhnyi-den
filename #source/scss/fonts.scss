@@ -108,6 +108,24 @@ h2 {
 	}
 }
 
+h3 {
+	@media (max-width:1660px) {
+        font-size: 36px !important;
+    }
+	@media (max-width:1440px) {
+		font-size: 34px !important; 
+	}
+	@media (max-width:1280px) {
+		font-size: 32px;
+	}
+	@media (max-width:1099px) {
+		font-size: 30px;
+	}
+	@media (max-width:767px) {
+		font-size: 28px !important;
+	}
+}
+
 h4 {
 	@media (max-width:1660px) {
         font-size: 34px !important;

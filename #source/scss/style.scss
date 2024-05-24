@@ -52,14 +52,16 @@
     }
     @media (max-width:467px) {
         padding: 0 16px;
-      font-size: 16px;
+      	font-size: 16px;
     }
     @media (max-width:420px) {
         font-size: 14px;
     }
-    @media (max-width:375px) {
-        font-size: 12px;
-    }
+
+	@media (max-width:390px) {
+		flex-wrap: wrap;
+		row-gap: 4px;
+	}
 
 
 	&.secondary {
@@ -124,11 +126,21 @@
         text-decoration: none;
 		color: #fff;
         transition: .2s ease;
+
+		white-space: nowrap;
         
 
         @media (max-width:991px) {
             line-height: unset !important;
         }
+
+		@media (max-width:467px) {
+			font-size: 16px;
+			
+		}
+		@media (max-width:420px) {
+			font-size: 14px;
+		}
         
 
         &:hover {
