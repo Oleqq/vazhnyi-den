@@ -2011,6 +2011,23 @@
     padding-top: 60px;
     padding-bottom: 60px;
 
+    &.secondary {
+        background-color:  #242424;
+
+        padding-bottom: 30px;
+
+        @media (max-width:767px) {
+            padding-bottom: 0;
+        }
+
+        h3 {
+            color: var(--white);
+        }
+        a {
+
+        }
+    }
+
     h3 {
         font-family: var(--font-family);
         font-weight: 700;

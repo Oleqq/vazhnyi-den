@@ -27,87 +27,90 @@
 
 
 
-const swiper = new Swiper('.portfolio__slider', {
-	direction: 'horizontal',
-	loop: true,
-	spaceBetween: 220,
-	speed: 1000,
-	navigation: {
-	  nextEl: '.portfolio__slider-button-next',
-	  prevEl: '.portfolio__slider-button-prev',
-	},
-	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
-	},
-	// autoplay: {
-	//   delay: 5000,
-	//   disableOnInteraction: false,
-	// },
+
+
+
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const swiper = new Swiper('.portfolio__slider', {
+      direction: 'horizontal',
+      loop: true,
+      spaceBetween: 220,
+      speed: 1000,
+      navigation: {
+        nextEl: '.portfolio__slider-button-next',
+        prevEl: '.portfolio__slider-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      });
+    
+    
+    
+      const PriceSlider = document.querySelector('.slider-services');
+      const PriceSliderNav = document.querySelector('.slider-services-nav');
+      
+      let mySwiperNav = new Swiper(PriceSliderNav, {
+        slidesPerView: 6,
+        
+        speed: 500,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        direction: 'vertical',
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+      
+      let mySwiper = new Swiper(PriceSlider, {
+        spaceBetween: 10,
+        speed: 500,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+          swiper: mySwiperNav,
+        },
+      });
+      
+      // Add click event to the navigation slides
+      mySwiperNav.slides.forEach((slide, index) => {
+        slide.addEventListener('click', () => {
+          mySwiper.slideToLoop(index);
+        });
+      });
+      
+      // Update active class for navigation slides when the main slider changes
+      mySwiper.on('slideChange', () => {
+        const activeIndex = mySwiper.realIndex;
+        mySwiperNav.slides.forEach(slide => slide.classList.remove('swiper-slide-active'));
+        mySwiperNav.slides[activeIndex].classList.add('swiper-slide-active');
+      });
+      
+      // Synchronize main slider with navigation slider changes
+      mySwiperNav.on('slideChange', () => {
+        const activeIndex = mySwiperNav.realIndex;
+        mySwiper.slideToLoop(activeIndex);
+      });
+      
   });
-
-
-
-  const PriceSlider = document.querySelector('.slider-services');
-  const PriceSliderNav = document.querySelector('.slider-services-nav');
-  
-  let mySwiperNav = new Swiper(PriceSliderNav, {
-	  slidesPerView: 6,
-	  
-	  speed: 500,
-	  watchSlidesVisibility: true,
-	  watchSlidesProgress: true,
-	  direction: 'vertical',
-	  pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true,
-	  },
-	  navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-	  },
-  });
-  
-  let mySwiper = new Swiper(PriceSlider, {
-	  spaceBetween: 10,
-	  speed: 500,
-	  pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true,
-	  },
-	  navigation: {
-		  nextEl: '.swiper-button-next',
-		  prevEl: '.swiper-button-prev',
-	  },
-	  thumbs: {
-		  swiper: mySwiperNav,
-	  },
-  });
-  
-  // Add click event to the navigation slides
-  mySwiperNav.slides.forEach((slide, index) => {
-	  slide.addEventListener('click', () => {
-		  mySwiper.slideToLoop(index);
-	  });
-  });
-  
-  // Update active class for navigation slides when the main slider changes
-  mySwiper.on('slideChange', () => {
-	  const activeIndex = mySwiper.realIndex;
-	  mySwiperNav.slides.forEach(slide => slide.classList.remove('swiper-slide-active'));
-	  mySwiperNav.slides[activeIndex].classList.add('swiper-slide-active');
-  });
-  
-  // Synchronize main slider with navigation slider changes
-  mySwiperNav.on('slideChange', () => {
-	  const activeIndex = mySwiperNav.realIndex;
-	  mySwiper.slideToLoop(activeIndex);
-  });
-  
-
-
-
-
 
 
 
@@ -306,86 +309,88 @@ const swiper = new Swiper('.portfolio__slider', {
 
 
 
-
-
-
-
-
-
-
-
-
+document.addEventListener("DOMContentLoaded", function() {
   const ReviewsSwiper = new Swiper('.reviews__slider', {
-	direction: 'horizontal',
-	
-	spaceBetween: 32,
-	speed: 700,
-    slidesPerView: 4,
-	navigation: {
-	  nextEl: '.reviews__slider-button-next',
-	  prevEl: '.reviews__slider-button-prev',
-	},
-	pagination: {
-	  el: '.swiper-pagination',
-	  clickable: true,
-	},
-
-    breakpoints: {
-        1660: {
-            spaceBetween: 32,
-            slidesPerView: 4,
-        },
-        1440: {
-            spaceBetween: 16,
-            slidesPerView: 4,
-        },
-        1280: {
-            slidesPerView: 4,
-        },
-        1099: {
-            slidesPerView: 4,  
-        },
-        991: {
-            slidesPerView: 3,
-            spaceBetween: 8,
-        },
-        767: {
-            slidesPerView: 3,
-        },
-        567: {
-            slidesPerView: 2,
-        },
-        467: {
-            slidesPerView: 2,
-        },
-        390: {
-            slidesPerView: 1,
-
-            loop: true,
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            spaceBetween: -100,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 0,
-                depth: 800,
-                modifier: 1,
-                slideShadows: false
-            },
-
-        },
-        0: {
-            slidesPerView: 1,
-            spaceBetween: 8,
-        },
+    direction: 'horizontal',
+    
+    spaceBetween: 32,
+    speed: 700,
+      slidesPerView: 4,
+    navigation: {
+      nextEl: '.reviews__slider-button-next',
+      prevEl: '.reviews__slider-button-prev',
     },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  
+      breakpoints: {
+          1660: {
+              spaceBetween: 32,
+              slidesPerView: 4,
+          },
+          1440: {
+              spaceBetween: 16,
+              slidesPerView: 4,
+          },
+          1280: {
+              slidesPerView: 4,
+          },
+          1099: {
+              slidesPerView: 4,  
+          },
+          991: {
+              slidesPerView: 3,
+              spaceBetween: 8,
+          },
+          767: {
+              slidesPerView: 3,
+          },
+          567: {
+              slidesPerView: 2,
+          },
+          467: {
+              slidesPerView: 2,
+          },
+          390: {
+              slidesPerView: 1,
+  
+              loop: true,
+              effect: "coverflow",
+              grabCursor: true,
+              centeredSlides: true,
+              spaceBetween: -100,
+              coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 800,
+                  modifier: 1,
+                  slideShadows: false
+              },
+  
+          },
+          0: {
+              slidesPerView: 1,
+              spaceBetween: 8,
+          },
+      },
+  
+    // autoplay: {
+    //   delay: 5000,
+    //   disableOnInteraction: false,
+    // },
+    });
+});
 
-	// autoplay: {
-	//   delay: 5000,
-	//   disableOnInteraction: false,
-	// },
-  });
+
+
+
+
+
+
+
+  
 
 
 
@@ -567,10 +572,12 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     spaceBetween: 0,
     speed: 1000,
+    
     navigation: {
       nextEl: '.portfolio__slider-button-next',
       prevEl: '.portfolio__slider-button-prev',
     },
+
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -611,6 +618,7 @@ document.addEventListener('DOMContentLoaded', function() {
         slidesPerView: 2, // Установите количество слайдов для начального разрешения
       },
     }
+
   });
 });
 
@@ -854,3 +862,168 @@ document.addEventListener('DOMContentLoaded', function() {
   // Инициализируем пагинацию на старте
   updatePagination();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// страница свадебные идеи
+document.addEventListener('DOMContentLoaded', function() {
+  const ideas = document.querySelectorAll('.idea');
+  const prevButton = document.querySelector('.pagination__button:first-child');
+  const nextButton = document.querySelector('.pagination__button:last-child');
+  const pagesContainer = document.querySelector('.pagination__pages');
+  const section = document.querySelector('.ideas'); // Убедитесь, что у вас есть элемент с классом "ideas"
+  let currentIndex = 0;
+  const itemsPerPage = 5;
+  const totalPages = Math.ceil(ideas.length / itemsPerPage);
+
+  function updateIdeas() {
+      ideas.forEach((idea, index) => {
+          idea.style.display = (index >= currentIndex * itemsPerPage && index < (currentIndex + 1) * itemsPerPage) ? 'flex' : 'none';
+      });
+      updatePagination();
+  }
+
+  function createPageButton(pageNumber, isActive = false) {
+      const pageElement = document.createElement('span');
+      pageElement.textContent = pageNumber;
+      pageElement.className = 'pagination__page-number';
+      if (isActive) {
+          pageElement.classList.add('active');
+      }
+      pageElement.addEventListener('click', () => {
+          currentIndex = pageNumber - 1;
+          updateIdeas();
+          section.scrollIntoView({ behavior: 'smooth' });
+      });
+      return pageElement;
+  }
+
+  function updatePagination() {
+      pagesContainer.innerHTML = ''; // Очищаем контейнер
+
+      if (totalPages <= 1) return;
+
+      const firstPage = createPageButton(1, currentIndex === 0);
+      pagesContainer.appendChild(firstPage);
+
+      if (currentIndex < 3) {
+          for (let i = 2; i <= Math.min(3, totalPages - 1); i++) {
+              const page = createPageButton(i, currentIndex === i - 1);
+              pagesContainer.appendChild(page);
+          }
+          if (totalPages > 4) {
+              const dots = document.createElement('span');
+              dots.textContent = '...';
+              dots.className = 'pagination__dots';
+              pagesContainer.appendChild(dots);
+          }
+      } else if (currentIndex >= totalPages - 3) {
+          const dots = document.createElement('span');
+          dots.textContent = '...';
+          dots.className = 'pagination__dots';
+          pagesContainer.appendChild(dots);
+
+          for (let i = totalPages - 3; i <= totalPages - 1; i++) {
+              const page = createPageButton(i, currentIndex === i - 1);
+              pagesContainer.appendChild(page);
+          }
+      } else {
+          const dots1 = document.createElement('span');
+          dots1.textContent = '...';
+          dots1.className = 'pagination__dots';
+          pagesContainer.appendChild(dots1);
+
+          for (let i = currentIndex; i <= currentIndex + 2; i++) {
+              const page = createPageButton(i + 1, currentIndex === i);
+              pagesContainer.appendChild(page);
+          }
+
+          const dots2 = document.createElement('span');
+          dots2.textContent = '...';
+          dots2.className = 'pagination__dots';
+          pagesContainer.appendChild(dots2);
+      }
+
+      const lastPage = createPageButton(totalPages, currentIndex === totalPages - 1);
+      pagesContainer.appendChild(lastPage);
+  }
+
+  prevButton.addEventListener('click', function() {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateIdeas();
+          section.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+
+  nextButton.addEventListener('click', function() {
+      if ((currentIndex + 1) * itemsPerPage < ideas.length) {
+          currentIndex++;
+          updateIdeas();
+          section.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+
+  updateIdeas();
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Найдите все элементы с классом 'idea__slider'
+  var sliders = document.querySelectorAll('.idea__slider');
+
+  // Инициализируйте каждый слайдер
+  sliders.forEach(function(slider, index) {
+      new Swiper(slider, {
+          loop: true,
+          pagination: {
+              el: slider.querySelector('.swiper-pagination'),
+              clickable: true,
+          },
+          navigation: {
+              nextEl: slider.querySelector('.idea__slider-button-next'),
+              prevEl: slider.querySelector('.idea__slider-button-prev'),
+          },
+      });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
