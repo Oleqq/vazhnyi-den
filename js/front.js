@@ -801,3 +801,56 @@ document.addEventListener('DOMContentLoaded', function() {
     
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+// страница о нас
+
+document.addEventListener('DOMContentLoaded', function() {
+  const swiper = new Swiper('.about-photo__slider', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: 0,
+    speed: 1000,
+    navigation: {
+      nextEl: '.about-photo__button-next',
+      prevEl: '.about-photo__button-prev',
+    },
+    pagination: {
+      el: '.about-photo__pagination',
+      clickable: true,
+      renderBullet: function (index, className) {
+        return '<div class="' + className + ' page-' + (index + 1) + '">' + (index + 1 ).toString().padStart(2, '0') + '</div>';
+      },
+    },
+    on: {
+      slideChange: function () {
+        updatePagination();
+      },
+    },
+  });
+
+  function updatePagination() {
+    const bullets = document.querySelectorAll('.about-photo__pagination div');
+    bullets.forEach((bullet, index) => {
+      if (index === swiper.activeIndex) {
+        bullet.classList.add('swiper-pagination-active');
+      } else {
+        bullet.classList.remove('swiper-pagination-active');
+      }
+    });
+  }
+
+  // Инициализируем пагинацию на старте
+  updatePagination();
+});
