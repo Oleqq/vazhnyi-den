@@ -1026,4 +1026,104 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// страница отзывы
+document.addEventListener('DOMContentLoaded', function() {
+  const reviews = document.querySelectorAll('.review');
+  const prevButton = document.querySelector('.pagination__button:first-child');
+  const nextButton = document.querySelector('.pagination__button:last-child');
+  const pagesContainer = document.querySelector('.pagination__pages');
+  const section = document.querySelector('.reviews-inner'); // Убедитесь, что у вас есть элемент с классом "reviews"
+  let currentIndex = 0;
+  const itemsPerPage = 5;
+  const totalPages = Math.ceil(reviews.length / itemsPerPage);
 
+  function updateReviews() {
+      reviews.forEach((review, index) => {
+          review.style.display = (index >= currentIndex * itemsPerPage && index < (currentIndex + 1) * itemsPerPage) ? 'flex' : 'none';
+      });
+      updatePagination();
+  }
+
+  function createPageButton(pageNumber, isActive = false) {
+      const pageElement = document.createElement('span');
+      pageElement.textContent = pageNumber;
+      pageElement.className = 'pagination__page-number';
+      if (isActive) {
+          pageElement.classList.add('active');
+      }
+      pageElement.addEventListener('click', () => {
+          currentIndex = pageNumber - 1;
+          updateReviews();
+          section.scrollIntoView({ behavior: 'smooth' });
+      });
+      return pageElement;
+  }
+
+  function updatePagination() {
+      pagesContainer.innerHTML = ''; // Очищаем контейнер
+
+      if (totalPages <= 1) return;
+
+      const firstPage = createPageButton(1, currentIndex === 0);
+      pagesContainer.appendChild(firstPage);
+
+      if (currentIndex < 3) {
+          for (let i = 2; i <= Math.min(3, totalPages - 1); i++) {
+              const page = createPageButton(i, currentIndex === i - 1);
+              pagesContainer.appendChild(page);
+          }
+          if (totalPages > 4) {
+              const dots = document.createElement('span');
+              dots.textContent = '...';
+              dots.className = 'pagination__dots';
+              pagesContainer.appendChild(dots);
+          }
+      } else if (currentIndex >= totalPages - 3) {
+          const dots = document.createElement('span');
+          dots.textContent = '...';
+          dots.className = 'pagination__dots';
+          pagesContainer.appendChild(dots);
+
+          for (let i = totalPages - 3; i <= totalPages - 1; i++) {
+              const page = createPageButton(i, currentIndex === i - 1);
+              pagesContainer.appendChild(page);
+          }
+      } else {
+          const dots1 = document.createElement('span');
+          dots1.textContent = '...';
+          dots1.className = 'pagination__dots';
+          pagesContainer.appendChild(dots1);
+
+          for (let i = currentIndex; i <= currentIndex + 2; i++) {
+              const page = createPageButton(i + 1, currentIndex === i);
+              pagesContainer.appendChild(page);
+          }
+
+          const dots2 = document.createElement('span');
+          dots2.textContent = '...';
+          dots2.className = 'pagination__dots';
+          pagesContainer.appendChild(dots2);
+      }
+
+      const lastPage = createPageButton(totalPages, currentIndex === totalPages - 1);
+      pagesContainer.appendChild(lastPage);
+  }
+
+  prevButton.addEventListener('click', function() {
+      if (currentIndex > 0) {
+          currentIndex--;
+          updateReviews();
+          section.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+
+  nextButton.addEventListener('click', function() {
+      if ((currentIndex + 1) * itemsPerPage < reviews.length) {
+          currentIndex++;
+          updateReviews();
+          section.scrollIntoView({ behavior: 'smooth' });
+      }
+  });
+
+  updateReviews();
+});
