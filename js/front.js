@@ -678,11 +678,66 @@ document.addEventListener('DOMContentLoaded', function() {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+      2560: {
+        direction: 'vertical',
+      },
+      1920: {
+        direction: 'vertical',
+      },
+      1660: {
+        direction: 'vertical',
+      },
+      1440: {
+        direction: 'vertical',
+      },
+      1380: {
+        direction: 'vertical',
+      },
+      1280: {
+        direction: 'vertical',
+      },
+      1199: {
+        direction: 'vertical',
+      },
+      1099: {
+        direction: 'horizontal',
+        slidesPerView: 5,
+        freeMode: true,
+        freeModeSticky: false, // Убедитесь, что это значение false
+        loop: false,
+       
+      },
+      991: {
+        direction: 'horizontal',
+      },
+      767: {
+        direction: 'horizontal',
+      },
+      676: {
+        direction: 'horizontal',
+      },
+      567: {
+        direction: 'horizontal',
+      },
+      467: {
+        direction: 'horizontal',
+      },
+      390: {
+        direction: 'horizontal',
+
+      },
+      0: {
+        direction: 'horizontal',
+      },
+
+    },
   });
 
   let ServicesPrice = new Swiper(ServicesPriceSlider, {
     spaceBetween: 10,
     speed: 500,
+    effect: 'fade',
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
@@ -1127,3 +1182,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
   updateReviews();
 });
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.innerWidth < 1199) {
+    var swiper = new Swiper('.services-tabs__slider', {
+      // Optional parameters
+      slidesPerView: 5,
+      
+      freeMode: true,
+      freeModeSticky: false, // Убедитесь, что это значение false
+      loop: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        2560: {
+          slidesPerView: 6, // Установите количество слайдов для разрешения 2560px
+        },
+        1660: {
+          slidesPerView: 5,
+        },
+        1440: {
+          slidesPerView: 5,
+        },
+        1280: {
+          slidesPerView: 4,
+        },
+        1099: {
+          slidesPerView: 4,
+        },
+        991: {
+          slidesPerView: 4,
+        },
+        767: {
+          slidesPerView: 3,
+        },
+        676: {
+          slidesPerView: 3,
+        },
+        567: {
+          slidesPerView: 2,
+        },
+        467: {
+          slidesPerView: 2,
+        },
+        0: {
+          slidesPerView: 2, // Установите количество слайдов для начального разрешения
+        },
+      },
+    });
+  }
+});
+

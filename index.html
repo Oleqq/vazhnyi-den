@@ -381,7 +381,7 @@
 				</div>
 			</section>
 
-			<section class="second portfolio" id="portfolio">
+			<section class="second portfolio normal-scroll" id="portfolio">
 				<div class="container portfolio__container">
 					<div class="portfolio__wrapper">
 						<h2>
@@ -496,51 +496,8 @@
 
 									</div>
 
-								</div>
-
-							  </div>
-
-							  <div class="swiper-slide">
-
-								<div class="portfolio__items">
-
-									<div class="portfolio__card">
-
-										<img src="./img/portfolio-card-1.jpg" alt="">
-										
-										<h6>
-											Саша и Наташа
-										</h6>
-										<p>
-											MIDNIGHT IN MOSCOW
-										</p>
-
-									</div>
-
-									<div class="portfolio__card">
-
-										<img src="./img/portfolio-card-2.jpg" alt="">
-										
-										<h6>
-											Борис и Юлия
-										</h6>
-										<p>
-											MIDNIGHT IN MOSCOW
-										</p>
-
-									</div>
-
-									<div class="portfolio__card">
-
-										<img src="./img/portfolio-card-3.jpg" alt="">
-										
-										<h6>
-											Юрий и Дарья
-										</h6>
-										<p>
-											MIDNIGHT IN MOSCOW
-										</p>
-
+									<div class="swiper-slide-counter">
+										02
 									</div>
 
 								</div>
@@ -590,51 +547,8 @@
 
 									</div>
 
-								</div>
-
-							  </div>
-
-							  <div class="swiper-slide">
-
-								<div class="portfolio__items">
-
-									<div class="portfolio__card">
-
-										<img src="./img/portfolio-card-1.jpg" alt="">
-										
-										<h6>
-											Саша и Наташа
-										</h6>
-										<p>
-											MIDNIGHT IN MOSCOW
-										</p>
-
-									</div>
-
-									<div class="portfolio__card">
-
-										<img src="./img/portfolio-card-2.jpg" alt="">
-										
-										<h6>
-											Борис и Юлия
-										</h6>
-										<p>
-											MIDNIGHT IN MOSCOW
-										</p>
-
-									</div>
-
-									<div class="portfolio__card">
-
-										<img src="./img/portfolio-card-3.jpg" alt="">
-										
-										<h6>
-											Юрий и Дарья
-										</h6>
-										<p>
-											MIDNIGHT IN MOSCOW
-										</p>
-
+									<div class="swiper-slide-counter">
+										03
 									</div>
 
 								</div>
@@ -682,6 +596,112 @@
 											MIDNIGHT IN MOSCOW
 										</p>
 
+									</div>
+
+									<div class="swiper-slide-counter">
+										04
+									</div>
+
+								</div>
+
+							  </div>
+
+							  <div class="swiper-slide">
+
+								<div class="portfolio__items">
+
+									<div class="portfolio__card">
+
+										<img src="./img/portfolio-card-1.jpg" alt="">
+										
+										<h6>
+											Саша и Наташа
+										</h6>
+										<p>
+											MIDNIGHT IN MOSCOW
+										</p>
+
+									</div>
+
+									<div class="portfolio__card">
+
+										<img src="./img/portfolio-card-2.jpg" alt="">
+										
+										<h6>
+											Борис и Юлия
+										</h6>
+										<p>
+											MIDNIGHT IN MOSCOW
+										</p>
+
+									</div>
+
+									<div class="portfolio__card">
+
+										<img src="./img/portfolio-card-3.jpg" alt="">
+										
+										<h6>
+											Юрий и Дарья
+										</h6>
+										<p>
+											MIDNIGHT IN MOSCOW
+										</p>
+
+									</div>
+
+									<div class="swiper-slide-counter">
+										05
+									</div>
+
+								</div>
+
+							  </div>
+
+							  <div class="swiper-slide">
+
+								<div class="portfolio__items">
+
+									<div class="portfolio__card">
+
+										<img src="./img/portfolio-card-1.jpg" alt="">
+										
+										<h6>
+											Саша и Наташа
+										</h6>
+										<p>
+											MIDNIGHT IN MOSCOW
+										</p>
+
+									</div>
+
+									<div class="portfolio__card">
+
+										<img src="./img/portfolio-card-2.jpg" alt="">
+										
+										<h6>
+											Борис и Юлия
+										</h6>
+										<p>
+											MIDNIGHT IN MOSCOW
+										</p>
+
+									</div>
+
+									<div class="portfolio__card">
+
+										<img src="./img/portfolio-card-3.jpg" alt="">
+										
+										<h6>
+											Юрий и Дарья
+										</h6>
+										<p>
+											MIDNIGHT IN MOSCOW
+										</p>
+
+									</div>
+
+									<div class="swiper-slide-counter">
+										06
 									</div>
 
 								</div>
@@ -1816,6 +1836,10 @@
 			<section class="team" id="team">
 				
 				<div class="container team__container">
+					
+					<h4>
+						Агентство «Важный день» – это команда из 4 свадебных специалистов, которые любят свое дело
+					</h4>
 
 					<div class="team__wrapper desktop">
 						
@@ -2431,9 +2455,7 @@
 
 					<div class="team__wrapper mobile">
 
-						<h2>
-							Агентство «Важный день» – это команда из 4 свадебных специалистов, которые любят свое дело
-						</h2>
+						
 
 						<div class="team__grid">
 
@@ -2684,30 +2706,69 @@
 
 	<script src="./js/swiper-bundle.min.js"></script>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-	<!-- <script>
-	  gsap.registerPlugin(ScrollTrigger);
-  
-	  const sections = document.querySelectorAll(".main section");
-  
-	  sections.forEach((section, index) => {
-		ScrollTrigger.create({
-		  trigger: section,
-		  start: "top top",
-		  end: () => `+=${section.scrollHeight}`,
-		  pin: true,
-		  pinSpacing: false,
-		  scrub: 1,
-		  snap: {
-			snapTo: 1, // Snap to each section
-			duration: { min: 0.1, max: 0.3 }, // Faster snapping
-			delay: 0.1,
-			ease: "power2.inOut" // Faster ease
-		  },
-		});
-	  });
-	</script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollToPlugin.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
+
+        let panels = gsap.utils.toArray("section"),
+            observer = ScrollTrigger.normalizeScroll(true),
+            scrollTween;
+
+        document.addEventListener("touchstart", e => {
+            if (scrollTween) {
+                e.preventDefault();
+                e.stopImmediatePropagation();
+            }
+        }, { capture: true, passive: false });
+
+        function goToSection(index) {
+            const section = panels[index];
+            const sectionHeight = section.offsetHeight;
+            const viewportHeight = window.innerHeight;
+
+            if (sectionHeight > viewportHeight) {
+                // If the section height is greater than viewport height, scroll normally
+                gsap.to(window, {
+                    scrollTo: { y: section, autoKill: false },
+                    duration: 1,
+                    onComplete: () => scrollTween = null,
+                    overwrite: true
+                });
+            } else {
+                // Otherwise, snap to the section
+                scrollTween = gsap.to(window, {
+                    scrollTo: { y: section.offsetTop, autoKill: false },
+                    onStart: () => {
+                        observer.disable();
+                        observer.enable();
+                    },
+                    duration: 1,
+                    onComplete: () => scrollTween = null,
+                    overwrite: true
+                });
+            }
+        }
+
+        panels.forEach((panel, index) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top bottom",
+                end: () => "+=" + (panel.offsetHeight - window.innerHeight),
+                onToggle: self => self.isActive && !scrollTween && goToSection(index)
+            });
+        });
+
+        ScrollTrigger.create({
+            start: 0,
+            end: "max",
+            snap: {
+                snapTo: 1 / (panels.length - 1),
+                duration: 1
+            }
+        });
+    </script> -->
 
 	<script src="./js/front.js"></script>
 <div class="overlay"></div>

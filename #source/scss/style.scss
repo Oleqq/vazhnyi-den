@@ -21,6 +21,10 @@
 @import "modules/article";
 
 
+
+
+
+
 // стили хлебных крошек
 // breadcrumbs 
 .breadcrumbs {
@@ -581,9 +585,11 @@ section {
 	overflow: hidden;
 	min-height: unset !important;
 
+	padding-bottom: 0 !important;
+
 	@media (max-width:700px) {
 		padding-top: 40px;
-		padding-bottom: 40px;
+		
 	}
 
 	h2 {
@@ -1605,7 +1611,7 @@ section {
 // <--- --- about-index section --- --->
 .about-index {
 
-	@media (max-width:700px) {
+	@media (max-width:1099px) {
 		padding-top: 40px;
 		padding-bottom: 40px;
 	}
@@ -1669,14 +1675,14 @@ section {
 			gap: 16px;
 			margin-bottom: 100px;
 		}
-		@media (max-width:700px) {
+		@media (max-width:1099px) {
 			flex-direction: column;
 			margin-bottom: 24px;
 		}
 
 		& > h2 {
 			display: none;
-			@media (max-width:700px) {
+			@media (max-width:1099px) {
 				display: block;
 				margin-bottom: 0;
 			}
@@ -1690,7 +1696,7 @@ section {
 
 		height: fit-content;
 
-		@media (max-width:700px) {
+		@media (max-width:1099px) {
 			width: fit-content;
 		}
 
@@ -1744,7 +1750,7 @@ section {
 		@media (max-width:991px) {
 			max-width: 350px;
 		}
-		@media (max-width:700px) {
+		@media (max-width:1099px) {
 			max-width: unset;
 			display: flex;
     		flex-direction: column-reverse;
@@ -1759,7 +1765,7 @@ section {
 		}
 
 		.ui-button-primary {
-			@media (max-width:700px) {
+			@media (max-width:1099px) {
 				order: 0;
 				margin: 0 auto;
 			}
@@ -1772,12 +1778,12 @@ section {
 
 	&__text {
 
-		@media (max-width:700px) {
+		@media (max-width:1099px) {
 			order: 1;
 		}
 
 		h2 {
-			@media (max-width:700px) {
+			@media (max-width:1099px) {
 				display: none;
 			}
 		}
@@ -1793,13 +1799,13 @@ section {
 		@media (max-width:1280px) {
 			display: grid;
 			grid-template-columns: 2fr 2fr;
-			margin-bottom: auto;
+			margin-bottom: 24px;
 			gap: 14px;
 		}
 		@media (max-width:1099px) {
 			margin-bottom: 16px;
 		}
-		@media (max-width:700px) {
+		@media (max-width:1099px) {
 			order: 2;
 			margin-bottom: 0;
 		}
@@ -2112,6 +2118,7 @@ section {
 	.swiper-slide {
 		max-height: 800px;
 
+		display: flex;
 		position: relative;
 
 		&::before {
@@ -2717,6 +2724,14 @@ section {
 // <--- --- team section --- --->
 .team {
 
+
+	h4 {
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: 56px;
+		text-transform: uppercase;
+		color: var(--black);
+	}
 
 	@media (max-width:700px) {
 		padding-top: 40px;
