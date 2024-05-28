@@ -18,6 +18,7 @@
 
 @import "modules/reviews";
 
+@import "modules/article";
 
 
 // стили хлебных крошек
@@ -53,6 +54,7 @@
     }
 	@media (max-width:700px) {
 		padding: 0 24px;
+		flex-wrap: wrap;
 	}
     @media (max-width:567px) {
 
@@ -61,13 +63,15 @@
     @media (max-width:467px) {
         padding: 0 16px;
       	font-size: 16px;
+		gap: 6px;
+
     }
     @media (max-width:420px) {
         font-size: 14px;
     }
 
 	@media (max-width:390px) {
-		flex-wrap: wrap;
+		
 		row-gap: 4px;
 	}
 
