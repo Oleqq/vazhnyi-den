@@ -36,6 +36,10 @@
             @media (max-width:1440px) {
                 height: 450px;
             }
+            @media (max-width:676px) {
+                flex-direction: column;
+                height: 100%;
+            }
 
             .fancybox-trigger.mobile {
                 position: absolute;
@@ -64,6 +68,8 @@
         &__img {
             width: 100%;
             height: 676px;
+            display: flex;
+
 
             @media (max-width:1920px) {
                 height: 490px;
@@ -86,8 +92,12 @@
             @media (max-width:1440px) {
                 height: 450px;
             }
-            @media (max-width:567px) {
+            @media (max-width:676px) {
                 width: 100%;
+                height: calc(100vh - 120px);
+            }
+            @media (max-width:567px) {
+                height: calc(100vh - 95px);
             }
 
             #portfolio-hero__video-button {
@@ -165,9 +175,14 @@
                     height: 450px;
                 }
 
-                @media (max-width:567px) {
+                @media (max-width:676px) {
                     width: 100%;
+                    height: calc(100vh - 120px);
                 }
+                @media (max-width:567px) {
+                    height: calc(100vh - 95px);
+                }
+                
 
                 &.hidden {
                     opacity: 0;
@@ -203,6 +218,12 @@
             @media (max-width:1660px) {
                 height: 500px;
             }
+            @media (max-width:676px) {
+                height: calc(100vh - 120px);
+            }
+            @media (max-width:567px) {
+                height: calc(100vh - 95px);
+            }
 
             &.hidden {
                 opacity: 0;
@@ -218,10 +239,58 @@
             position: relative;
             width: 40%;
 
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(180deg, rgba(36, 36, 36, 0) 23.56%, #242424 85.71%);
+                bottom: 0;
+                right: 0;
+                opacity: .75;
 
-            @media (max-width:567px) {
-                display: none;
+                z-index: 0;
             }
+
+            &-mobile {
+                position: absolute;
+                right: 0;
+                left: 0;
+                margin: 0 auto;
+                bottom: 12px;
+
+                z-index: 2;
+
+                display: none;
+
+                @media (max-width:676px) {
+                    display: block;
+                }
+
+                h3 {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 22px;
+                    text-transform: uppercase;
+                    text-align: center;
+                    color: var(--1);
+
+                    margin-bottom: 4px;
+                }
+                h4 {
+                    font-family: var(--font-family);
+                    font-weight: 700;
+                    font-size: 14px;
+                    text-align: center;
+                    color: var(--1);
+                    
+                    margin-top: 0;
+                }
+            }
+
+           @media (max-width:676px) {
+            width: 100%;
+           }
 
             .ui-button-primary {
 
@@ -230,12 +299,15 @@
                 bottom: 42px;
                 left: 42px;
 
-                border: 1px solid var(--black);
-                color: var(--black) !important;
-                background: unset;
-                background-clip: unset;
-                -webkit-background-clip: unset;
-                -webkit-text-fill-color: unset !important;
+                z-index: 2;
+
+                @media (max-width:676px) {
+                    right: 0;
+                    left: 0;
+                    margin: 0 auto;
+                    bottom: 40%;
+                
+                }
                 
             }
         }

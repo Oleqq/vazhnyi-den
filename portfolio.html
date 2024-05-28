@@ -402,7 +402,12 @@
 					<div class="portfolio-hero__wrapper">
 
 						<div class="portfolio-hero__video">
-							<img class="portfolio-hero__video-thumbnail" src="./img/portfolio-hero-1.jpg" alt="">
+							<picture>
+								<!-- Загружаем изображение для мобильных устройств, если ширина экрана меньше 676px -->
+								<source srcset="./img/portfolio-img-mobile-3.jpg" media="(max-width: 676px)">
+								<!-- По умолчанию загружаем изображение для десктопа -->
+								<img class="portfolio-hero__video-thumbnail" src="./img/portfolio-hero-1.jpg" alt="Portfolio Hero Video Thumbnail">
+							</picture>
 
 							<video class="video hidden" src="https://into-the-program.com/uploads/sample_video01.mp4" muted=""></video>
 
@@ -457,26 +462,44 @@
 						<button class="ui-button-primary fancybox-trigger mobile">
 							Посмотреть фото
 							<svg width="30" height="28" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path d="M29.8536 14.3536C30.0488 14.1583 30.0488 13.8417 29.8536 13.6464L26.6716 10.4645C26.4763 10.2692 26.1597 10.2692 25.9645 10.4645C25.7692 10.6597 25.7692 10.9763 25.9645 11.1716L28.7929 14L25.9645 16.8284C25.7692 17.0237 25.7692 17.3403 25.9645 17.5355C26.1597 17.7308 26.4763 17.7308 26.6716 17.5355L29.8536 14.3536ZM0.5 14.5L29.5 14.5L29.5 13.5L0.5 13.5L0.5 14.5Z" fill="url(#paint0_linear_3001_538)"></path>
+								<path d="M29.8536 14.3536C30.0488 14.1583 30.0488 13.8417 29.8536 13.6464L26.6716 10.4645C26.4763 10.2692 26.1597 10.2692 25.9645 10.4645C25.7692 10.6597 25.7692 10.9763 25.9645 11.1716L28.7929 14L25.9645 16.8284C25.7692 17.0237 25.7692 17.3403 25.9645 17.5355C26.1597 17.7308 26.4763 17.7308 26.6716 17.5355L29.8536 14.3536ZM0.5 14.5L29.5 14.5L29.5 13.5L0.5 13.5L0.5 14.5Z" fill="url(#paint0_linear_3009_583)" />
 								<defs>
-								  <linearGradient id="paint0_linear_3001_538" x1="0.871797" y1="14.6016" x2="29.1282" y2="14.6016" gradientUnits="userSpaceOnUse">
-									<stop stop-color="#C2A959"></stop>
-									<stop offset="0.483255" stop-color="#F9EFB4"></stop>
-									<stop offset="0.981573" stop-color="#C2A959"></stop>
+								  <linearGradient id="paint0_linear_3009_583" x1="0.871797" y1="14.6016" x2="29.1282" y2="14.6016" gradientUnits="userSpaceOnUse">
+									<stop stop-color="#C2A959" />
+									<stop offset="0.483255" stop-color="#F9EFB4" />
+									<stop offset="0.981573" stop-color="#C2A959" />
 								  </linearGradient>
 								</defs>
-							</svg>
+							  </svg>
 						</button>
+
+						
 	
 						
 						<div class="portfolio-hero__more">
 							<img class="portfolio-hero__img" src="./img/portfolio-hero-2.jpg" alt="">
 							<button class="ui-button-primary">
 								посмотреть фото
-								<svg width="30" height="9" viewBox="0 0 30 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path d="M29.3536 4.85356C29.5488 4.65829 29.5488 4.34171 29.3536 4.14645L26.1716 0.964468C25.9763 0.769206 25.6597 0.769206 25.4645 0.964468C25.2692 1.15973 25.2692 1.47631 25.4645 1.67158L28.2929 4.5L25.4645 7.32843C25.2692 7.52369 25.2692 7.84027 25.4645 8.03554C25.6597 8.2308 25.9763 8.2308 26.1716 8.03554L29.3536 4.85356ZM-4.37114e-08 5L29 5L29 4L4.37114e-08 4L-4.37114e-08 5Z" fill="#242424" />
-								</svg>
+								<svg width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M29.8536 4.35356C30.0488 4.15829 30.0488 3.84171 29.8536 3.64645L26.6716 0.464468C26.4763 0.269206 26.1597 0.269206 25.9645 0.464468C25.7692 0.65973 25.7692 0.976313 25.9645 1.17158L28.7929 4L25.9645 6.82843C25.7692 7.02369 25.7692 7.34027 25.9645 7.53554C26.1597 7.7308 26.4763 7.7308 26.6716 7.53554L29.8536 4.35356ZM0.5 4.5L29.5 4.5L29.5 3.5L0.5 3.5L0.5 4.5Z" fill="url(#paint0_linear_3009_584)" />
+									<defs>
+									  <linearGradient id="paint0_linear_3009_584" x1="0.871797" y1="4.60159" x2="29.1282" y2="4.60159" gradientUnits="userSpaceOnUse">
+										<stop stop-color="#C2A959" />
+										<stop offset="0.483255" stop-color="#F9EFB4" />
+										<stop offset="0.981573" stop-color="#C2A959" />
+									  </linearGradient>
+									</defs>
+								  </svg>
 							</button>
+
+							<div class="portfolio-hero__more-mobile">
+								<h3>
+									ФОТОГАЛЕРЕЯ
+								</h3>
+								<h4>
+									Саша и Наташа
+								</h4>
+							</div>
 						</div>
 	
 					</div>
