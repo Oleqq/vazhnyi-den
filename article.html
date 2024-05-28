@@ -497,8 +497,14 @@
                         </div>
 
                         <div>
-                            <img src="./img/article-img-4.jpg" alt="">
+                            <picture>
+                                <!-- Загружаем изображение для мобильных устройств, если ширина экрана меньше 767px -->
+                                <source srcset="./img/article-img-8.jpg" media="(max-width: 767px)">
+                                <!-- По умолчанию загружаем изображение для десктопа -->
+                                <img src="./img/article-img-4.jpg" alt="Article Image">
+                            </picture>
                         </div>
+                        
 
                        
 
