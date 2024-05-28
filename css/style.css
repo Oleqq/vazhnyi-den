@@ -6439,7 +6439,7 @@ section {
   z-index: 13;
   top: 36%;
 }
-@media (max-width: 991px) {
+@media (max-width: 992px) {
   .fixed-menu {
     display: none;
   }
