@@ -3351,9 +3351,9 @@ section {
 	width: 100%;
 	background: #303030;
 
-	@media (max-width:467px) {
+	@media (max-width:767px) {
 		display: flex;
-		flex-direction: column;
+		flex-direction: column-reverse;
 	}
 
 	
@@ -3380,9 +3380,45 @@ section {
 		}
 	}
 
+	h5 {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 32px;
+		text-transform: uppercase;
+		color: var(--white);
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+
+	p {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 18px;
+		color: var(--white);
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		li {
+			font-family: var(--font-family);
+			font-weight: 500;
+			font-size: 18px;
+			color: var(--white);
+			@media (max-width:767px) {
+				font-size: 14px !important;
+			}
+			@media (max-width:467px) {
+				font-size: 13px !important;
+			}
+			
+		}
+	}
+
 	img {
 		width: 100%;
-		height: fit-content;
+		height: 100%;
 		object-fit: cover;
 		object-position: top;
 
@@ -3670,7 +3706,15 @@ section {
 		@media (max-width:1440px) {
 			height: 400px;
 		}
-		@media (max-width:467px) {
+		@media (max-width:991px) {
+			display: flex;
+			height: 500px;
+		}
+		@media (max-width:567px) {
+			height: 350px;
+		}
+		
+		@media (max-width:767px) {
 			width: 100%;
 		}
 
@@ -3689,6 +3733,14 @@ section {
 			@media (max-width:1440px) {
 				height: 400px;
 			}
+			@media (max-width:991px) {
+				display: flex;
+				height: 500px;
+			}
+			@media (max-width:567px) {
+				height: 350px;
+			}
+			
 
 		}
 
@@ -3704,6 +3756,13 @@ section {
 			}
 			@media (max-width:1440px) {
 				height: 400px;
+			}
+			@media (max-width:991px) {
+				display: flex;
+				height: 500px;
+			}
+			@media (max-width:567px) {
+				height: 350px;
 			}
 			
 		}
@@ -3908,8 +3967,9 @@ section {
 
 
 	&__content {
-		padding: 40px;
-		text-align: center;
+		padding: 0 20px 0 40px;
+		
+		max-width: 400px;
 
 		@media (max-width:991px) {
 			padding: 24px;
@@ -3921,6 +3981,7 @@ section {
 			width: 90%;
 		}
 		
+
 	   
 
 		&__button {

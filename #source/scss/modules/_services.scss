@@ -1831,7 +1831,7 @@
             }
             
             @media (max-width:767px) {
-                padding: 24px;
+                padding: 24px 48px;
             }
             @media (max-width:567px) {
                 width: fit-content;
@@ -1935,6 +1935,7 @@
 				@media (max-width:767px) {
 					width: 36px;
 					height: 36px;
+                    top: 25%;
 				}
 				@media (max-width:567px) {
 					width: 32px;
@@ -2027,6 +2028,7 @@
 				@media (max-width:767px) {
 					width: 36px;
 					height: 36px;
+                    top: 25%;
 				}
 				@media (max-width:567px) {
 					width: 32px;
