@@ -2208,6 +2208,9 @@ html {
   .work__main .work {
     height: auto;
     margin: 0;
+    padding-top: 95px;
+    padding-bottom: 0;
+    background-color: #242424;
   }
 }
 .work__main .work.hero {
@@ -2219,7 +2222,6 @@ html {
 @media (max-width: 567px) {
   .work__main .work.hero {
     height: auto;
-    padding: 0;
   }
 }
 .work__main .work.hero .container {

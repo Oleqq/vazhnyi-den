@@ -825,6 +825,10 @@
             @media (max-width:567px) {
                 height: auto;
                 margin: 0;
+                padding-top: 95px;
+                padding-bottom: 0;
+
+                background-color: #242424;
             }
 
 			&.hero {
@@ -835,7 +839,7 @@
 
                 @media (max-width:567px) {
                     height: auto;
-                    padding: 0;
+                   
                 }
                 
 	
