@@ -2196,6 +2196,7 @@ html {
 }
 .work__main {
   overflow-y: scroll;
+  scroll-snap-type: y mandatory;
   height: 100dvh;
   overflow-x: hidden;
 }
