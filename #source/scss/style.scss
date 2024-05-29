@@ -545,6 +545,9 @@ section {
 		justify-content: flex-end;
 		height: 85vh;
 
+		@media (max-width:467px) {
+			height: 75vh;
+		}
 
 		
 		h1 {
@@ -1659,8 +1662,7 @@ section {
 	}
 	&__wrapper {
 		display: flex;
-		gap: 126px;
-
+		gap: 32px;
 		margin-bottom: 220px;
 
 		@media (max-width:1660px) {

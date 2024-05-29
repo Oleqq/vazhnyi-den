@@ -92,6 +92,7 @@
             }
             @media (max-width:467px) {
                 padding: 0 16px;
+                bottom: 124px;
             }
 
 
@@ -2729,6 +2730,13 @@
                 font-size: 19px;
                 line-height: 126%;
                 color: var(--black);
+
+                @media (max-width:567px) {
+                    font-size: 16px;
+                }
+                @media (max-width:467px) {
+                    font-size: 14px;
+                }
 
                 svg {
                     flex-shrink: 0;
