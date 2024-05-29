@@ -1913,6 +1913,12 @@ html {
   margin-bottom: 120px;
   background-color: #fff;
 }
+@media (max-width: 567px) {
+  .work {
+    margin-bottom: 0;
+    height: auto;
+  }
+}
 .work h2 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -1921,6 +1927,11 @@ html {
   color: #000;
   margin-top: 0;
   margin-bottom: 0;
+}
+@media (max-width: 567px) {
+  .work h2 {
+    color: #fff;
+  }
 }
 .work h5 {
   font-family: var(--font-family);
@@ -1939,6 +1950,16 @@ html {
     margin-bottom: 0;
   }
 }
+@media (max-width: 567px) {
+  .work h5 {
+    color: #fff;
+  }
+}
+@media (max-width: 567px) {
+  .work h5 svg path {
+    fill: #fff;
+  }
+}
 .work p {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1951,6 +1972,29 @@ html {
     margin-bottom: 24px;
   }
 }
+@media (max-width: 567px) {
+  .work p {
+    color: #fff;
+  }
+}
+.work-next {
+  display: none;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  opacity: 0.5;
+  background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media (max-width: 567px) {
+  .work-next {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .work .ui-button-primary {
   font-family: var(--font-family);
   font-weight: 400;
@@ -1961,6 +2005,23 @@ html {
   background-clip: unset;
   -webkit-background-clip: unset;
   -webkit-text-fill-color: unset;
+}
+@media (max-width: 567px) {
+  .work .ui-button-primary {
+    background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border: 1px solid #E7B012;
+    width: -webkit-fill-available;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 567px) {
+  .work .ui-button-primary svg path {
+    fill: #E7B012;
+  }
 }
 .work__container {
   width: 100%;
@@ -2011,6 +2072,11 @@ html {
     height: fit-content;
   }
 }
+@media (max-width: 567px) {
+  .work__info {
+    z-index: 2;
+  }
+}
 .work__img {
   position: absolute;
   right: -300px;
@@ -2049,6 +2115,15 @@ html {
     margin-bottom: 24px;
   }
 }
+@media (max-width: 567px) {
+  .work__img {
+    height: calc(100dvh - 95px);
+    margin-bottom: 0;
+  }
+}
+.work__img picture {
+  display: flex;
+}
 .work__img img {
   width: 928px;
   height: 616px;
@@ -2075,6 +2150,94 @@ html {
   .work__img img {
     width: 100%;
   }
+}
+.work__img::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: linear-gradient(180deg, rgba(36, 36, 36, 0) -35.44%, #242424 85.71%);
+  opacity: 0.9;
+  display: none;
+}
+@media (max-width: 567px) {
+  .work__img::after {
+    display: flex;
+  }
+}
+
+@media (max-width: 567px) {
+  .work {
+    padding: 0;
+  }
+}
+@media (max-width: 567px) {
+  .work__info {
+    padding: 0 24px;
+    position: absolute;
+    margin-bottom: 124px;
+  }
+}
+@media (max-width: 467px) {
+  .work__info {
+    padding: 0 16px;
+  }
+}
+@media (max-width: 567px) {
+  .work__img img {
+    height: calc(100dvh - 95px);
+  }
+}
+.work__body {
+  height: 100dvh;
+  overflow-x: hidden;
+}
+.work__main {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  height: 100dvh;
+  overflow-x: hidden;
+}
+.work__main .work {
+  height: 100%;
+  scroll-snap-align: start;
+}
+@media (max-width: 567px) {
+  .work__main .work {
+    height: auto;
+    margin: 0;
+  }
+}
+.work__main .work.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 567px) {
+  .work__main .work.hero {
+    height: auto;
+    padding: 0;
+  }
+}
+.work__main .work.hero .container {
+  height: auto;
+}
+
+.work-hero {
+  padding: 0;
+  position: absolute;
+  padding-top: 0;
+  display: flex;
+  background-color: #fff;
+}
+.work-hero header {
+  background-color: #fff;
+}
+.work-hero .work__img {
+  height: calc(100dvh - 95px);
 }
 
 .services-hero {

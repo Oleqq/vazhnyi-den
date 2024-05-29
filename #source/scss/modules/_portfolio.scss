@@ -525,6 +525,11 @@
 
     background-color:  #fff;
 
+    @media (max-width:567px) {
+        margin-bottom: 0;
+        height: auto;
+    }
+
     h2 {
         font-family: var(--font-family);
         font-weight: 700;
@@ -534,6 +539,10 @@
 
         margin-top: 0;
         margin-bottom: 0;
+
+        @media (max-width:567px) {
+            color: #fff;   
+        }
     }
     h5 {
         font-family: var(--font-family);
@@ -554,6 +563,20 @@
         @media (max-width:800px) {
             margin-bottom: 0;
         }
+
+        @media (max-width:567px) {
+            color: #fff;
+            
+        }
+
+
+        svg {
+            path {
+                @media (max-width:567px) {
+                    fill: #fff;
+                }
+            }
+        }
     }
 
     p {
@@ -566,7 +589,32 @@
         @media (max-width:800px) {
             margin-bottom: 24px;
         }
+        @media (max-width:567px) {
+            color: #fff;
+        }
         
+        
+    }
+    
+    &-next {
+        display: none;
+
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 14px;
+
+        opacity: .5;
+
+        background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width:567px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .ui-button-primary {
@@ -581,6 +629,28 @@
         background-clip: unset;
         -webkit-background-clip: unset;
         -webkit-text-fill-color: unset;
+
+        @media (max-width:567px) {
+            background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            border: 1px solid #E7B012;
+
+            width: -webkit-fill-available;
+            justify-content: center;
+         
+            margin-bottom: 16px;
+
+        }
+
+        svg {
+            path {
+                @media (max-width:567px) {
+                    fill: #E7B012;
+                }
+            }
+        }
     }
 
     &__container {
@@ -623,6 +693,9 @@
             max-width: 100%;
             height: fit-content;
         }
+        @media (max-width:567px) {
+            z-index: 2;
+        }
 
     }
 
@@ -656,7 +729,16 @@
             width: 100%;
             margin-bottom: 24px;
         }
+        @media (max-width:567px) {
+            height: calc(100dvh - 95px);  
+            margin-bottom: 0;
 
+        }
+
+
+        picture {
+            display: flex;
+        }
 
         img {
             width: 928px;
@@ -678,5 +760,109 @@
                 width: 100%;
             }
         }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            background: linear-gradient(180deg, rgba(36, 36, 36, 0) -35.44%, #242424 85.71%);
+            opacity: .9;
+            display: none;
+
+            @media (max-width:567px) {
+                display: flex;
+            }
+        }
+    }
+}
+
+
+
+
+.work {
+
+	@media (max-width:567px) {
+		padding: 0;
+	}
+
+	&__info {
+		@media (max-width:567px) {
+			padding: 0 24px;
+            position: absolute;
+            margin-bottom: 124px;
+		}
+		@media (max-width:467px) {
+			padding: 0 16px;
+		}
+	}
+	&__img {
+		 img {
+			@media (max-width:567px) {
+			
+                height: calc(100dvh - 95px);
+			}
+		 }
+	}
+
+	&__body {
+		height: 100dvh;
+		overflow-x: hidden;
+	}
+
+	&__main {
+		overflow-y: scroll;
+		scroll-snap-type: y mandatory;
+		height: 100dvh;
+		overflow-x: hidden;
+	
+		.work {
+			height: 100%;
+			scroll-snap-align: start;
+	
+            @media (max-width:567px) {
+                height: auto;
+                margin: 0;
+            }
+
+			&.hero {
+				height: 100vh;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+                @media (max-width:567px) {
+                    height: auto;
+                    padding: 0;
+                }
+                
+	
+				.container {
+					height: auto;
+				}
+			}
+		}
+	}
+}
+
+
+.work-hero {
+	padding: 0;
+    position: absolute;
+    padding-top: 0;
+    display: flex;
+
+	
+
+	background-color: #fff;
+
+	header {
+		background-color: #fff;
+	}
+
+    .work__img {
+        height: calc(100dvh - 95px);
     }
 }
