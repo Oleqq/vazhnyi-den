@@ -2177,7 +2177,7 @@ html {
   .work__info {
     padding: 0 24px;
     position: absolute;
-    margin-bottom: 124px;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 467px) {
@@ -2196,7 +2196,6 @@ html {
 }
 .work__main {
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   height: 100dvh;
   overflow-x: hidden;
 }
@@ -2222,6 +2221,7 @@ html {
 @media (max-width: 567px) {
   .work__main .work.hero {
     height: auto;
+    padding-top: 95px;
   }
 }
 .work__main .work.hero .container {

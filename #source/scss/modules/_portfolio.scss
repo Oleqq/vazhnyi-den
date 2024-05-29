@@ -792,7 +792,7 @@
 		@media (max-width:567px) {
 			padding: 0 24px;
             position: absolute;
-            margin-bottom: 124px;
+            margin-bottom: 24px;
 		}
 		@media (max-width:467px) {
 			padding: 0 16px;
@@ -814,7 +814,7 @@
 
 	&__main {
 		overflow-y: scroll;
-		scroll-snap-type: y mandatory;
+		// scroll-snap-type: y mandatory;
 		height: 100dvh;
 		overflow-x: hidden;
 	
@@ -839,6 +839,7 @@
 
                 @media (max-width:567px) {
                     height: auto;
+                    padding-top: 95px;
                    
                 }
                 
