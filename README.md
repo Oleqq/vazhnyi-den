@@ -49,3 +49,6 @@
     Наши работы
 </a>
 <br>
+<a href="https://vazhnyi-den.vercel.app/wedding-sochi.html">
+    Свадьба в Сочи
+</a>
