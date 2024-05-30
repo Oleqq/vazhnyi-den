@@ -1240,3 +1240,78 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 });
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// lightbox
+
+
+
+
+
+
+
+
+
+// service-portfolio slider
+document.addEventListener('DOMContentLoaded', function() {
+  var swiper = new Swiper('.services-portfolio__slider', {
+      slidesPerView: 1,
+      speed: 1000,
+      spaceBetween: 224,
+      loop: false,
+      navigation: {
+        nextEl: '.services-portfolio__slider-button-next',
+        prevEl: '.services-portfolio__slider-button-prev',
+      },
+      on: {
+          init: function() {
+              createCustomPagination(this);
+          },
+          slideChange: function() {
+              updateCustomPagination(this);
+          }
+      }
+  });
+
+  function createCustomPagination(swiper) {
+      var paginationContainer = document.querySelector('.services-portfolio__slider-pagination');
+      for (var i = 0; i < swiper.slides.length; i++) {
+          var bullet = document.createElement('div');
+          bullet.classList.add('services-portfolio__slider-pagination__bullet');
+          bullet.setAttribute('data-index', i);
+          bullet.addEventListener('click', function() {
+              var index = parseInt(this.getAttribute('data-index'));
+              swiper.slideTo(index + 1);
+          });
+          paginationContainer.appendChild(bullet);
+      }
+      updateCustomPagination(swiper);
+  }
+
+  function updateCustomPagination(swiper) {
+      var bullets = document.querySelectorAll('.services-portfolio__slider-pagination__bullet');
+      bullets.forEach(function(bullet, index) {
+          bullet.classList.remove('services-portfolio__slider-pagination__bullet-active');
+          if (index === swiper.realIndex) {
+              bullet.classList.add('services-portfolio__slider-pagination__bullet-active');
+          }
+      });
+  }
+});

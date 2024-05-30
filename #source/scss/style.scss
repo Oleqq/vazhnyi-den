@@ -3424,6 +3424,8 @@ section {
 		object-fit: cover;
 		object-position: top;
 
+		
+
 		@media (max-width:1099px) {
 			height: 100%;
 		}
@@ -3516,6 +3518,8 @@ section {
 				max-height: 100%;
 				object-fit: cover;
 				object-position: top;
+
+				max-height: 1024px;
 	
 				@media (max-width:1099px) {
 					height: 550px;
@@ -4080,4 +4084,26 @@ section {
 		}
 	}
 
+}
+
+
+
+
+.idea-hero {
+
+	.services-hero__wrapper {
+
+		h2 {
+			margin-bottom: 24px;
+		}
+
+		p {
+			font-family: var(--font-family);
+			font-weight: 500;
+			font-size: 35px;
+			color: var(--1);
+
+			margin: 0 0 16px;
+		}
+	}
 }
