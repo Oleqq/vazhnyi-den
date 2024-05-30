@@ -1888,12 +1888,12 @@ html {
 }
 @media (max-width: 1440px) {
   .portfolio-big-img img {
-    height: 500px;
+    height: 800px;
   }
 }
 @media (max-width: 767px) {
   .portfolio-big-img img {
-    height: 300px;
+    height: 400px;
   }
 }
 
@@ -2928,6 +2928,9 @@ html {
   transition: 0.4s ease;
   color: var(--golden-light-golden);
 }
+.services-info {
+  padding-bottom: 24px;
+}
 @media (max-width: 467px) {
   .services-info {
     padding: 0 0 24px;
@@ -3119,6 +3122,9 @@ html {
     opacity: 0.5;
   }
 }
+.services-price {
+  padding-top: 24px;
+}
 @media (max-width: 700px) {
   .services-price {
     padding-bottom: 120px;
@@ -3130,6 +3136,7 @@ html {
   font-size: 56px;
   line-height: 100%;
   color: #000;
+  margin-top: 0;
 }
 .services-price-slider__wrapper {
   display: flex;
@@ -8414,10 +8421,15 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   border: 2px solid #c2a959;
   transition: 0.2s ease;
   cursor: pointer;
+  right: 24px;
+  bottom: 24px;
 }
 @media (max-width: 1440px) {
   .ui-button-rounded {
@@ -8433,6 +8445,14 @@ section {
 @media (max-width: 767px) {
   .ui-button-rounded {
     font-size: 12px;
+  }
+}
+@media (max-width: 567px) {
+  .ui-button-rounded {
+    right: 12px;
+    bottom: 12px;
+    font-size: 11px !important;
+    padding: 10px;
   }
 }
 .ui-button-rounded:hover {
@@ -11470,30 +11490,14 @@ section {
 }
 .idea__slider {
   width: 929px;
-  height: 571px;
+  height: fit-content;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 @media (max-width: 1660px) {
   .idea__slider {
     width: 66%;
-    height: 470px;
-  }
-}
-@media (max-width: 1440px) {
-  .idea__slider {
-    height: 400px;
-  }
-}
-@media (max-width: 991px) {
-  .idea__slider {
-    display: flex;
-    height: 500px;
-  }
-}
-@media (max-width: 567px) {
-  .idea__slider {
-    height: 350px;
   }
 }
 @media (max-width: 767px) {
@@ -11533,25 +11537,14 @@ section {
   display: flex;
   flex-shrink: 0;
 }
-@media (max-width: 1660px) {
-  .idea__slider .swiper-slide {
-    height: 470px;
-  }
-}
-@media (max-width: 1440px) {
-  .idea__slider .swiper-slide {
-    height: 400px;
-  }
-}
 @media (max-width: 991px) {
   .idea__slider .swiper-slide {
     display: flex;
-    height: 500px;
   }
 }
 @media (max-width: 567px) {
   .idea__slider .swiper-slide {
-    height: 350px;
+    height: 300px;
   }
 }
 .idea__slider-button {
@@ -11785,7 +11778,7 @@ section {
   stroke-width: 1px;
 }
 .idea__content {
-  padding: 0 20px 0 40px;
+  padding: 20px 40px;
   max-width: 400px;
 }
 @media (max-width: 991px) {

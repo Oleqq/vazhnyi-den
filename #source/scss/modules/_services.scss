@@ -784,6 +784,8 @@
     // info 
     &-info {
         
+        padding-bottom: 24px;
+
         @media (max-width:467px) {
             padding: 0 0 24px;
         }
@@ -998,6 +1000,7 @@
 
     &-price {
 
+        padding-top: 24px;
         @media (max-width:700px) {
             padding-bottom: 120px;
         }
@@ -1008,6 +1011,8 @@
             font-size: 56px;
             line-height: 100%;
             color: #000;
+
+            margin-top: 0;
         }
 
         &-slider {
