@@ -1315,3 +1315,68 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   }
 });
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const selectBoxCurrent = document.querySelector('.select-box__current');
+  const selectBoxList = document.querySelector('.select-box__list');
+  const overlay = document.querySelector('.overlay');
+
+  let isOpen = false;
+
+  selectBoxCurrent.addEventListener('click', function(event) {
+      event.stopPropagation(); // Предотвращаем всплытие события, чтобы не срабатывал клик на document
+      if (isOpen) {
+          hideSelectBoxList();
+      } else {
+          showSelectBoxList();
+      }
+  });
+
+  overlay.addEventListener('click', function() {
+      if (isOpen) {
+          hideSelectBoxList();
+      }
+  });
+
+  document.querySelectorAll('.select-box__option').forEach(function(option) {
+      option.addEventListener('click', function() {
+          const value = this.textContent;
+          const input = selectBoxCurrent.querySelector('.select-box__input');
+          const inputText = selectBoxCurrent.querySelector('.select-box__input-text');
+
+          input.value = value;
+          inputText.textContent = value;
+
+          hideSelectBoxList();
+      });
+  });
+
+  function showSelectBoxList() {
+      selectBoxList.style.opacity = '1';
+      isOpen = true;
+      selectBoxCurrent.classList.add('active');
+      // Также можно добавить обработчик событий для закрытия списка при клике вне его пределов
+      document.addEventListener('click', handleOutsideClick);
+  }
+
+  function hideSelectBoxList() {
+      selectBoxList.style.opacity = '0';
+      isOpen = false;
+      selectBoxCurrent.classList.remove('active');
+      document.removeEventListener('click', handleOutsideClick);
+  }
+
+  function handleOutsideClick(event) {
+      if (!selectBoxList.contains(event.target) && !selectBoxCurrent.contains(event.target)) {
+          hideSelectBoxList();
+      }
+  }
+});

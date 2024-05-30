@@ -52,3 +52,6 @@
 <a href="https://vazhnyi-den.vercel.app/wedding-sochi.html">
     Свадьба в Сочи
 </a>
+<a href="https://vazhnyi-den.vercel.app/calculator.html">
+    Свадьба в Сочи
+</a>
