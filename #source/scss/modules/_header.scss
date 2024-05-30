@@ -37,6 +37,8 @@
             }
             @media (max-width:567px) {
                 height: 75px;
+                transform: scale(.87);
+                margin-left: 24px;
             }
         }
 
@@ -237,6 +239,34 @@
             position: fixed;
         }
 
+        &.white-desktop {
+            background-color: #fff;
+        }
+
+        .burger.mobile-back {
+            svg {
+                path {
+                    fill: #242424;
+                    @media (max-width:567px) {
+                        fill:  #fff;
+                    }
+                }
+            }
+        }
+
+        &.white-mobile {
+            .burger.mobile-back {
+                svg {
+                    path {
+                        fill: #242424;
+                        @media (max-width:567px) {
+                            fill:  #242424;
+                        }
+                    }
+                }
+            }
+        }
+
         .nav__link  {
             color: #242424;
 
@@ -330,12 +360,26 @@
                 }
             }
         }
+
+
+
     }
 
 
 
     &.black {
         background-color: #242424;
+
+        .header__links {
+            a {
+                color: #fff !important;
+            }
+        }
+
+        .nav__link {
+            color: #fff !important;
+            transition: 0.2s ease;
+        }
     }
 
     
@@ -640,3 +684,48 @@
     display: block;
     transition: 1s ease;
 }
+
+
+
+
+
+
+.header__links-mobile {
+    position: relative;
+    margin-right: 8px;
+  }
+  
+  .whatsapp-mobile.main {
+    cursor: pointer;
+  }
+  
+  .additional-links {
+    
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Adjust as needed */
+    left: 0;
+    transition: 1s ease;
+    height: fit-content;
+    opacity: 0;
+
+
+
+  }
+  
+  .additional-links.visible {
+    display: flex;
+    gap: 6px;
+    margin-top: 6px;
+
+    transition: 1s ease;
+    height: fit-content;
+    opacity: 1;
+
+
+  }
+  
+  .additional-links a {
+    margin-top: 5px; /* Adjust as needed */
+  }
+  

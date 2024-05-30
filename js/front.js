@@ -1380,3 +1380,21 @@ document.addEventListener('DOMContentLoaded', function() {
       }
   }
 });
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const headerLinksMobile = document.querySelector('.header__links-mobile');
+  const additionalLinks = document.querySelector('.additional-links');
+
+  headerLinksMobile.addEventListener('click', function() {
+      additionalLinks.classList.toggle('visible');
+  });
+});
