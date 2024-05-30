@@ -5155,6 +5155,14 @@ html {
   }
 }
 
+.service-body .about-video {
+  padding-top: 0;
+}
+@media (max-width: 700px) {
+  .service-body .about-video {
+    padding-top: 32px;
+  }
+}
 .service-body .video-slider {
   overflow: hidden;
 }

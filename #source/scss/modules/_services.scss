@@ -3179,8 +3179,18 @@
 }
 
 .service-body {
+    .about-video {
+        padding-top: 0;
+
+        @media (max-width:700px) {
+            padding-top: 32px;
+        }
+    
+    }
     .video-slider {
         overflow: hidden;
+
+       
     }
 }
 
