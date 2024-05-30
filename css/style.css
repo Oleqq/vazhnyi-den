@@ -786,7 +786,7 @@ html {
   .header .logo svg {
     height: 75px;
     transform: scale(0.87);
-    margin-left: 24px;
+    margin-left: 14px;
   }
 }
 @media (max-width: 567px) {
