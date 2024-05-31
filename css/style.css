@@ -1049,6 +1049,9 @@ html {
 .header.black .header__links a {
   color: #fff !important;
 }
+.header.black .burger.mobile-back svg path {
+  fill: #fff;
+}
 .header.black .nav__link {
   color: #fff !important;
   transition: 0.2s ease;

@@ -376,6 +376,14 @@
             }
         }
 
+        .burger.mobile-back {
+            svg {
+                path {
+                    fill: #fff;
+                }
+            }
+        }
+
         .nav__link {
             color: #fff !important;
             transition: 0.2s ease;
