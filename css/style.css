@@ -8578,6 +8578,33 @@ section {
   border-radius: 50%;
   animation: pulse 2.5s linear infinite;
 }
+@media (max-width: 1660px) {
+  .pulse::before {
+    left: -15px;
+    opacity: 0;
+    right: -15px;
+    top: -15px;
+    bottom: -15px;
+  }
+}
+@media (max-width: 991px) {
+  .pulse::before {
+    left: -10px;
+    opacity: 0;
+    right: -10px;
+    top: -10px;
+    bottom: -10px;
+  }
+}
+@media (max-width: 567px) {
+  .pulse::before {
+    left: -5px;
+    opacity: 0;
+    right: -5px;
+    top: -5px;
+    bottom: -5px;
+  }
+}
 
 @keyframes pulse {
   0% {
