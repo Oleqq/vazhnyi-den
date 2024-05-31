@@ -1053,6 +1053,11 @@ html {
   color: #fff !important;
   transition: 0.2s ease;
 }
+@media (max-width: 1440px) {
+  .header.black .nav__link {
+    color: #242424 !important;
+  }
+}
 
 .nav__list {
   display: flex;

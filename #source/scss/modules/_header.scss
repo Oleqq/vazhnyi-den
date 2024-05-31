@@ -379,6 +379,10 @@
         .nav__link {
             color: #fff !important;
             transition: 0.2s ease;
+
+            @media (max-width:1440px) {
+                color: #242424 !important;
+            }
         }
     }
 
