@@ -247,6 +247,18 @@
             font-size: 56px;
             line-height: 100%;
             color: #000;
+
+            @media (max-width:767px) {
+                margin: 24px 0;
+            }
+            @media (max-width:567px) {
+                margin-bottom: 8px;
+                margin-top: 20px;
+            }
+            
+            @media (max-width:390px) {
+                font-size: 22px !important;
+            }
         }
 
         p {
@@ -254,6 +266,13 @@
             font-weight: 400;
             font-size: 22px;
             color: #000;
+
+            @media (max-width:567px) {
+                margin-bottom: 0;
+            }
+            @media (max-width:390px) {
+                font-size: 14px !important;
+            }
         }
     }
 
@@ -419,6 +438,7 @@
 
             @media (max-width:467px) {
                 margin-bottom: 12px;
+                font-size: 22px !important;
             }
         }
 

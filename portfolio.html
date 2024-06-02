@@ -482,7 +482,7 @@
 						
 						<div class="portfolio-hero__more">
 							<img class="portfolio-hero__img" src="./img/portfolio-hero-2.jpg" alt="">
-							<button class="ui-button-primary">
+							<button class="ui-button-primary fancybox-trigger">
 								посмотреть фото
 								<svg width="30" height="8" viewBox="0 0 30 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M29.8536 4.35356C30.0488 4.15829 30.0488 3.84171 29.8536 3.64645L26.6716 0.464468C26.4763 0.269206 26.1597 0.269206 25.9645 0.464468C25.7692 0.65973 25.7692 0.976313 25.9645 1.17158L28.7929 4L25.9645 6.82843C25.7692 7.02369 25.7692 7.34027 25.9645 7.53554C26.1597 7.7308 26.4763 7.7308 26.6716 7.53554L29.8536 4.35356ZM0.5 4.5L29.5 4.5L29.5 3.5L0.5 3.5L0.5 4.5Z" fill="url(#paint0_linear_3009_584)" />
@@ -674,7 +674,7 @@
 			</section>
 
 			<section class="portfolio-big-img">
-				<img src="./img/portfolio-text-img-1.jpg" alt="">
+				<img src="./img/portfolio-text-img-1.jpg" alt="" data-fancybox="gallery-portfolio-1">
 			</section>
 
 
@@ -696,7 +696,7 @@
 			</section>
 
 			<section class="portfolio-big-img">
-				<img src="./img/portfolio-text-img-2.jpg" alt="">
+				<img src="./img/portfolio-text-img-2.jpg" alt="" data-fancybox="gallery-portfolio-1">
 			</section>
 
 
@@ -727,7 +727,7 @@
 			</section>
 
 			<section class="portfolio-big-img">
-				<img src="./img/portfolio-text-img-3.jpg" alt="">
+				<img src="./img/portfolio-text-img-3.jpg" alt="" data-fancybox="gallery-portfolio-1">
 			</section>
 
 			
@@ -748,7 +748,7 @@
 			</section>
 
 			<section class="portfolio-big-img">
-				<img src="./img/portfolio-text-img-4.jpg" alt="">
+				<img src="./img/portfolio-text-img-4.jpg" alt="" data-fancybox="gallery-portfolio-1">
 			</section>
 
 
@@ -782,7 +782,7 @@
 			</section>
 
 			<section class="portfolio-big-img">
-				<img src="./img/portfolio-text-img-5.jpg" alt="">
+				<img src="./img/portfolio-text-img-5.jpg" alt="" data-fancybox="gallery-portfolio-1">
 			</section>
 
 
@@ -803,7 +803,7 @@
 			</section>
 
 			<section class="portfolio-big-img">
-				<img src="./img/portfolio-text-img-6.jpg" alt="">
+				<img src="./img/portfolio-text-img-6.jpg" alt="" data-fancybox="gallery-portfolio-1">
 			</section>
 
 
@@ -824,7 +824,7 @@
 			</section>
 
 			<section class="portfolio-big-img">
-				<img src="./img/portfolio-text-img-7.jpg" alt="">
+				<img src="./img/portfolio-text-img-7.jpg" alt="" data-fancybox="gallery-portfolio-1">
 			</section>
 
 
@@ -1215,32 +1215,81 @@
 		</footer>
 	</div>
 
+
+
+	<script src="./js/fancybox.umd.js"></script>
+	<link rel="stylesheet" href="./css/fancybox.css">
+	<script>
+		document.querySelectorAll('.fancybox-trigger').forEach(button => {
+			button.addEventListener('click', function() {
+				Fancybox.show([
+					{ src: "./img/portfolio-text-img-1.jpg", type: "image" },
+					{ src: "./img/portfolio-text-img-2.jpg", type: "image" },
+					{ src: "./img/portfolio-text-img-3.jpg", type: "image" },
+					{ src: "./img/portfolio-text-img-4.jpg", type: "image" },
+					{ src: "./img/portfolio-text-img-5.jpg", type: "image" },
+					{ src: "./img/portfolio-text-img-6.jpg", type: "image" }
+				], {
+					groupAll: true
+				});
+			});
+		});
+	</script>
+	<style>
+		.fancybox__toolbar {
+			display: none;
+		}
+		.fancybox__thumbs {
+			display: none;
+		}
+
+		.fancybox__nav {
+
+			
+		}
+
+		.fancybox__nav .carousel__button {
+			background: none;
+			border: none;
+			width: 50px; /* Ширина изображения */
+			height: 50px; /* Высота изображения */
+			cursor: pointer;
+
+			
+		}
+
+		@media (max-width:567px) {
+			.fancybox__nav .carousel__button {
+				top: 53%;
+			 }
+		}
+
+		.fancybox__nav .carousel__button.is-next {
+			background-image: url(./img/fancybox-arrow-next.svg); /* Путь к SVG для кнопки Next */
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		.fancybox__nav .carousel__button.is-prev {
+			background-image: url(./img/fancybox-arrow-prev.svg); /* Путь к SVG для кнопки Previous */
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		/* Скрыть стандартные иконки */
+		.fancybox__nav .carousel__button svg {
+			display: none;
+		}
+
+
+	</style>
+
+
 	<script src="./js/swiper-bundle.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-	<!-- <script>
-	  gsap.registerPlugin(ScrollTrigger);
-  
-	  const sections = document.querySelectorAll(".main section");
-  
-	  sections.forEach((section, index) => {
-		ScrollTrigger.create({
-		  trigger: section,
-		  start: "top top",
-		  end: () => `+=${section.scrollHeight}`,
-		  pin: true,
-		  pinSpacing: false,
-		  scrub: 1,
-		  snap: {
-			snapTo: 1, // Snap to each section
-			duration: { min: 0.1, max: 0.3 }, // Faster snapping
-			delay: 0.1,
-			ease: "power2.inOut" // Faster ease
-		  },
-		});
-	  });
-	</script> -->
+
 
 	<script src="./js/front.js"></script>
 <div class="overlay"></div>

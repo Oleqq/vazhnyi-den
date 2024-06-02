@@ -699,7 +699,7 @@
 
                        
                         <div class="calculator-stage__img">
-                            <img src="./img/calculator-bg-1.jpg" alt="">
+                            <img src="./img/calculator-stage-2.jpg" alt="">
                         </div>
                         
 
@@ -714,7 +714,7 @@
                     <div class="calculator-stage__wrapper">
 
                         <div class="calculator-stage__img">
-                            <img src="./img/calculator-bg-1.jpg" alt="">
+                            <img src="./img/calculator-stage-3.jpg" alt="">
                         </div>
 
                         <div class="calculator-stage__next">
@@ -947,8 +947,132 @@
 
                        
                         <div class="calculator-stage__img">
-                            <img src="./img/calculator-bg-1.jpg" alt="">
+                            <img src="./img/calculator-stage-4.jpg" alt="">
                         </div>
+                        
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="calculator-stage odd">
+                <div class="calculator-stage__container container">
+
+                    <div class="calculator-stage__wrapper">
+
+                        <div class="calculator-stage__img">
+                            <img src="./img/calculator-stage-5.jpg" alt="">
+                        </div>
+
+                        <div class="calculator-stage__next">
+                            Далее
+                            <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.0006 20L0.714844 0L29.2863 2.01894e-06L15.0006 20Z" fill="#E3E3E3" />
+                            </svg>
+                        </div>
+
+                        <div class="calculator-stage__form">
+                            <form class="form">
+                                <div class="form__field form__field--guests">
+                                    <label class="form__label" for="guests">Укажите количество гостей:</label>
+                                    <input class="form__input" type="number" id="guests" name="guests" value="30">
+                                </div>
+                                <div class="form__field form__field--price-segment">
+                                    <label class="form__label" for="price-segment">Ценовой сегмент:</label>
+                                    <div class="select-box">
+                                        <div class="select-box__current" tabindex="1">
+                                            <div class="select-box__value">
+                                                <input class="select-box__input" type="radio" id="0" value="Выше среднего" name="price-segment" checked />
+                                                <p class="select-box__input-text">Выше среднего</p>
+                                            </div>
+                                            <div class="select-box__icon">
+                                                <svg class="icon" width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 1.33965L5.66 6.99965L11.32 1.33965L10.61 0.639648L5.66 5.58965L0.71 0.639648L0 1.33965Z" fill="#FAFAFA" />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <ul class="select-box__list">
+                                            <li>
+                                                <label class="select-box__option" for="1" aria-hidden="aria-hidden">Выше среднего</label>
+                                            </li>
+                                            <!-- <li>
+                                                <label class="select-box__option" for="2" aria-hidden="aria-hidden">Ниже среднего</label>
+                                            </li>
+                                            <li>
+                                                <label class="select-box__option" for="3" aria-hidden="aria-hidden">3 пункт</label>
+                                            </li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="form__budget">
+                                    <h2 class="form__budget-title">ПОЗИЦИИ БЮДЖЕТА</h2>
+                                    <div class="form__menu">
+                                        <h5 class="form__menu-title">Меню/обслуживание <span class="form__menu-price">8 000 ₽</span></h5>
+                                        <ul class="form__menu-list">
+                                            <li class="form__menu-item">
+                                                <input type="checkbox" id="welcome-buffet" name="menu" checked class="form__checkbox">
+                                                <label for="welcome-buffet" class="form__checkbox-label">Приветственный фуршет</label>
+                                                <span class="form__menu-item-price">2 000 ₽</span>
+                                            </li>
+                                            <li class="form__menu-item">
+                                                <input type="checkbox" id="banquet-menu" name="menu"  class="form__checkbox">
+                                                <label for="banquet-menu" class="form__checkbox-label">Банкетное меню</label>
+                                                <span class="form__menu-item-price">3 000 ₽</span>
+                                            </li>
+                                            <li class="form__menu-item">
+                                                <input type="checkbox" id="service-charge" name="menu"  class="form__checkbox">
+                                                <label for="service-charge" class="form__checkbox-label">Сервисное обслуживание 10%</label>
+                                                <span class="form__menu-item-price">1 000 ₽</span>
+                                            </li>
+                                            <li class="form__menu-item">
+                                                <input type="checkbox" id="cake" name="menu"  class="form__checkbox">
+                                                <label for="cake" class="form__checkbox-label">Торт</label>
+                                                <span class="form__menu-item-price">2 000 ₽</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="form__rent">
+                                        <h5 class="form__rent-title">Аренда <span class="form__rent-price">100 000 ₽</span></h5>
+                                        <ul class="form__rent-list">
+                                            <li class="form__rent-item">
+                                                <input type="radio" id="no-rent" name="rent" value="no-rent" checked class="form__radio">
+                                                <label for="no-rent" class="form__radio-label">Не требуется</label>
+                                                <span class="form__rent-item-price">0 ₽</span>
+                                            </li>
+                                            <li class="form__rent-item">
+                                                <input type="radio" id="restaurant" name="rent" value="restaurant" class="form__radio">
+                                                <label for="restaurant" class="form__radio-label">Ресторан</label>
+                                                <span class="form__rent-item-price">2 000 ₽</span>
+                                            </li>
+                                            <li class="form__rent-item">
+                                                <input type="radio" id="tent" name="rent" value="tent" class="form__radio">
+                                                <label for="tent" class="form__radio-label">Шатер + прилегающая территория</label>
+                                                <span class="form__rent-item-price">3 000 ₽</span>
+                                            </li>
+                                            <li class="form__rent-item">
+                                                <input type="radio" id="veranda" name="rent" value="veranda" class="form__radio">
+                                                <label for="veranda" class="form__radio-label">Веранда + прилегающая территория</label>
+                                                <span class="form__rent-item-price">4 000 ₽</span>
+                                            </li>
+                                            <li class="form__rent-item">
+                                                <input type="radio" id="loft" name="rent" value="loft" class="form__radio">
+                                                <label for="loft" class="form__radio-label">Лофт</label>
+                                                <span class="form__rent-item-price">5 000 ₽</span>
+                                            </li>
+                                            <li class="form__rent-item">
+                                                <input type="radio" id="manor" name="rent" value="manor" class="form__radio">
+                                                <label for="manor" class="form__radio-label">Усадьба</label>
+                                                <span class="form__rent-item-price">6 000 ₽</span>
+                                            </li>
+                                        </ul>
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        
                         
 
                     </div>

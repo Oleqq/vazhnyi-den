@@ -106,11 +106,33 @@
             flex-direction: column;
             justify-content: center;
 
+            animation: zoom 4s infinite ease-in-out;
+
+
+
+            @keyframes zoom {
+                0% {
+                    transform: scale(0.7);
+                }
+                25% {
+                    transform: scale(0.85);
+                }
+                75% {
+                    transform: scale(0.85);
+                }
+                100% {
+                    transform: scale(0.7);
+                }
+            }
+
             @media (max-width:676px) {
                 order: 3;
                 align-items: center;
 
             
+            }
+            @media (max-width:567px) {
+                transform: scale(.7);
             }
 
             h6 {
@@ -204,6 +226,13 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+
+            animation: zoom 4s infinite ease-in-out;
+
+            @media (max-width:567px) {
+                display: none;
+            }
+            
         }
     }
 }
@@ -774,7 +803,7 @@
         &:before {
             border: 1px solid #f8da5146;
 
-            background: #e7b21248;
+            background: #e7b21284;
         }
 
         &:after {
@@ -815,7 +844,7 @@
             transform: translateY(-50%) scale(0);
             width: 10px;
             height: 10px;
-            background-color: #e9b100; /* цвет заливки кружка при выборе */
+            background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);; /* цвет заливки кружка при выборе */
             border-radius: 50%;
             transition: transform 0.3s;
         }

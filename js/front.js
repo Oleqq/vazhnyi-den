@@ -370,9 +370,11 @@ document.addEventListener("DOMContentLoaded", function() {
               },
   
           },
+          250: {
+
+          },
           0: {
-              slidesPerView: 1,
-              spaceBetween: 8,
+
           },
       },
   

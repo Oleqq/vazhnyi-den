@@ -20,6 +20,10 @@
             color: var(--1);
 
             margin-bottom: 12px;
+
+            @media (max-width:567px) {
+                margin-bottom: 0;
+            }
         }
 
 
@@ -35,8 +39,14 @@
             @media (max-width:767px) {
                 padding: 0 24px;
             }
+            @media (max-width:567px) {
+                bottom: 24px;
+               
+            }
             @media (max-width:467px) {
                 padding: 0 16px;
+                bottom: 16px;
+                
             }
 
 
@@ -50,6 +60,11 @@
             display: flex;
 
             z-index: 0;
+
+            picture {
+                width: 100%;
+                display: flex;
+            }
 
             img {
                 width: 100%;
@@ -68,6 +83,10 @@
                 @media (max-width:767px) {
                     height: 500px;
                     object-position: center;
+                }
+                @media (max-width:567px) {
+                    padding-top: 95px;
+                    height: 300px;
                 }
             }
         }
