@@ -2756,7 +2756,7 @@ section {
 			}
 			&-prev {
 				@media (max-width:467px) {
-					transform: scale(0.5) translateX(150px);
+					transform: scale(0.5) translateX(360px);
 					transition: 1s ease;
 					z-index: 5;
 					opacity: .5;
@@ -2764,7 +2764,7 @@ section {
 			}
 			&-next {
 				@media (max-width:467px) {
-					transform: scale(0.5) translateX(-150px);
+					transform: scale(0.5) translateX(-360px);
 					z-index: 5;
 					opacity: .5;
 				}

@@ -11201,7 +11201,7 @@ section {
 }
 @media (max-width: 467px) {
   .reviews__slider .swiper-slide-prev {
-    transform: scale(0.5) translateX(150px);
+    transform: scale(0.5) translateX(360px);
     transition: 1s ease;
     z-index: 5;
     opacity: 0.5;
@@ -11209,7 +11209,7 @@ section {
 }
 @media (max-width: 467px) {
   .reviews__slider .swiper-slide-next {
-    transform: scale(0.5) translateX(-150px);
+    transform: scale(0.5) translateX(-360px);
     z-index: 5;
     opacity: 0.5;
   }

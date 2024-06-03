@@ -355,12 +355,11 @@ document.addEventListener("DOMContentLoaded", function() {
           },
           390: {
               slidesPerView: 1,
-  
               loop: true,
               effect: "coverflow",
               grabCursor: true,
               centeredSlides: true,
-              spaceBetween: -100,
+  
               coverflowEffect: {
                   rotate: 0,
                   stretch: 0,
@@ -368,13 +367,14 @@ document.addEventListener("DOMContentLoaded", function() {
                   modifier: 1,
                   slideShadows: false
               },
+              
   
           },
           250: {
-
+            slidesPerView: 1,
           },
           0: {
-
+            slidesPerView: 1,
           },
       },
   
