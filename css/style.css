@@ -10930,6 +10930,7 @@ section {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  text-decoration: none;
 }
 @media (max-width: 1440px) {
   .reviews__text a {
