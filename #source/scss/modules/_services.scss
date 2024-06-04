@@ -192,7 +192,7 @@
                 max-width: 200px !important;
             }
             @media (max-width:467px) {
-                font-size: 12px !important;
+                font-size: 13.5px !important;
                 padding: 12px 12px;
                 width: 150px !important;
             }
@@ -200,6 +200,7 @@
                 font-size: 12px !important;
                 padding: 10px 4px;
                 width: 130px !important;
+                gap: 2px;
             }
 
             svg {
