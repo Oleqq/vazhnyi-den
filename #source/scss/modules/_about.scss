@@ -105,6 +105,10 @@
         
             }
 
+            picture {
+                display: flex;
+            }
+
             img {
                 width: 100%;
                 max-height: 750px;
@@ -344,7 +348,7 @@
 
         @media (max-width:1099px) {
             padding-top: 0;
-            padding-bottom: 170px;
+            padding-bottom: 150px;
         }
         @media (max-width:676px) {
             padding-top: 300px;
@@ -384,11 +388,11 @@
                 row-gap: 156px;
             }
             @media (max-width:567px) {
-                row-gap: 212px;
+                row-gap: 24px;
             }
             @media (max-width:467px) {
                 grid-template-columns: 1fr;
-                row-gap: 84px;
+                row-gap: 20px;
             }
         }
 
@@ -398,15 +402,19 @@
 
             cursor:help;
 
+            @media (max-width:567px) {
+                display: flex;
+                flex-direction: column;
+            }
+            
+
             img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 object-position: top;
 
-                @media (max-width:467px) {
-                    aspect-ratio: 4/3.5;
-                }
+
             }
 
             &:hover {
@@ -481,12 +489,11 @@
             @media (max-width:567px) {
                 padding: 8px;
                 bottom: -150px;
+                position: relative;
+                bottom: 2px;
                 
             }
-            @media (max-width:467px) {
-                bottom: -50px;
 
-            }
 
             
 
@@ -548,7 +555,10 @@
 
                 @media (max-width:567px) {
                     font-size: 20px !important;
-                    color: var(--golden-light-golden);
+                    background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
                 }
             }
             h6 {
@@ -628,6 +638,11 @@
             padding-top: 80px;
             padding-bottom: 80px;
         }
+        @media (max-width:567px) {
+            padding-bottom: 24px;
+            padding-top: 48px;
+        }
+        
             
 
         h2 {
@@ -639,6 +654,14 @@
             color: var(--white);
 
             margin-top: 0;
+
+            @media (max-width:467px) {
+                font-size: 26px !important;
+            }
+            @media (max-width:390px) {
+                font-size: 22px !important;
+            }
+        
         }
 
         h4 {
@@ -887,6 +910,11 @@
             padding-top: 80px;
             padding-bottom: 80px;
         }
+        @media (max-width:567px) {
+            padding-bottom: 24px;
+            padding-top: 32px;
+        }
+        
 
         h2 {
             font-family: var(--font-family);
@@ -896,6 +924,13 @@
             color: var(--black);
 
             margin-top: 0;
+
+            @media (max-width:467px) {
+                font-size: 26px !important;
+            }
+            @media (max-width:390px) {
+                font-size: 24px !important;
+            }
         }
         p {
             font-family: var(--font-family);
@@ -928,10 +963,18 @@
                 display: flex;
                 align-items: center;
                 gap: 32px;
+
+                @media (max-width:567px) {
+                    position: relative;
+                }
             }
 
             .swiper-wrapper {
                 margin-bottom: 1vw;
+
+                @media (max-width:567px) {
+                    margin-bottom: 16px;
+                }
             }
 
             .swiper-slide {
@@ -975,6 +1018,12 @@
 
             display: flex;
             gap: 24px;
+
+            @media (max-width:567px) {
+                position: absolute;
+                width: 100%;
+                justify-content: space-between;
+            }
 
             &-prev {
 				cursor: pointer;
@@ -1157,6 +1206,10 @@
 
             @media (max-width:767px) {
                 font-size: 33px;
+            }
+            @media (max-width:567px) {
+                justify-content: center;
+                
             }
 
             .swiper-pagination-bullet {

@@ -420,6 +420,15 @@
         }
     }
 
+    &-img {
+        padding-bottom: 24px;
+        @media (max-width:567px) {
+            padding-bottom: 16px;
+        }
+        @media (max-width:467px) {
+            padding-bottom: 12px;
+        }
+    }
 
     &-also {
 

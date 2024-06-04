@@ -2397,7 +2397,7 @@ html {
     display: none;
   }
 }
-@media (max-height: 900px) {
+@media (max-height: 700px) {
   .work.hero .breadcrumbs__container {
     display: none;
   }
@@ -2557,6 +2557,7 @@ html {
 .services-tabs__tab {
   display: flex;
   align-items: center;
+  text-decoration: none;
   gap: 12px;
   height: 40px;
   width: 160px;
@@ -2616,7 +2617,7 @@ html {
     height: 28px;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 350px) {
   .services-tabs__tab svg {
     width: 24px;
     height: 24px;
@@ -3334,6 +3335,11 @@ html {
     padding-bottom: 120px;
   }
 }
+@media (max-width: 567px) {
+  .services-price {
+    padding-bottom: 24px;
+  }
+}
 .services-price h2 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -3515,6 +3521,7 @@ html {
     width: 100%;
     align-items: center;
     justify-content: center;
+    margin-top: 80px;
   }
 }
 .services-price-slider .swiper-slide {
@@ -5861,6 +5868,9 @@ body.stop-scrolling {
     height: 450px;
   }
 }
+.about-hero__bg picture {
+  display: flex;
+}
 .about-hero__bg img {
   width: 100%;
   max-height: 750px;
@@ -6067,7 +6077,7 @@ body.stop-scrolling {
 @media (max-width: 1099px) {
   .about-team {
     padding-top: 0;
-    padding-bottom: 170px;
+    padding-bottom: 150px;
   }
 }
 @media (max-width: 676px) {
@@ -6115,29 +6125,30 @@ body.stop-scrolling {
 }
 @media (max-width: 567px) {
   .about-team__wrapper {
-    row-gap: 212px;
+    row-gap: 24px;
   }
 }
 @media (max-width: 467px) {
   .about-team__wrapper {
     grid-template-columns: 1fr;
-    row-gap: 84px;
+    row-gap: 20px;
   }
 }
 .about-team__card {
   position: relative;
   cursor: help;
 }
+@media (max-width: 567px) {
+  .about-team__card {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .about-team__card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top;
-}
-@media (max-width: 467px) {
-  .about-team__card img {
-    aspect-ratio: 4/3.5;
-  }
 }
 .about-team__card:hover {
   transition: 1s ease;
@@ -6196,11 +6207,8 @@ body.stop-scrolling {
   .about-team__badge {
     padding: 8px;
     bottom: -150px;
-  }
-}
-@media (max-width: 467px) {
-  .about-team__badge {
-    bottom: -50px;
+    position: relative;
+    bottom: 2px;
   }
 }
 .about-team__badge:hover {
@@ -6246,7 +6254,10 @@ body.stop-scrolling {
 @media (max-width: 567px) {
   .about-team__badge h5 {
     font-size: 20px !important;
-    color: var(--golden-light-golden);
+    background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }
 .about-team__badge h6 {
@@ -6307,6 +6318,12 @@ body.stop-scrolling {
     padding-bottom: 80px;
   }
 }
+@media (max-width: 567px) {
+  .about-why {
+    padding-bottom: 24px;
+    padding-top: 48px;
+  }
+}
 .about-why h2 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -6315,6 +6332,16 @@ body.stop-scrolling {
   text-transform: uppercase;
   color: var(--white);
   margin-top: 0;
+}
+@media (max-width: 467px) {
+  .about-why h2 {
+    font-size: 26px !important;
+  }
+}
+@media (max-width: 390px) {
+  .about-why h2 {
+    font-size: 22px !important;
+  }
 }
 .about-why h4 {
   font-family: var(--second-family);
@@ -6534,6 +6561,12 @@ body.stop-scrolling {
     padding-bottom: 80px;
   }
 }
+@media (max-width: 567px) {
+  .about-photo {
+    padding-bottom: 24px;
+    padding-top: 32px;
+  }
+}
 .about-photo h2 {
   font-family: var(--font-family);
   font-weight: 700;
@@ -6541,6 +6574,16 @@ body.stop-scrolling {
   text-transform: uppercase;
   color: var(--black);
   margin-top: 0;
+}
+@media (max-width: 467px) {
+  .about-photo h2 {
+    font-size: 26px !important;
+  }
+}
+@media (max-width: 390px) {
+  .about-photo h2 {
+    font-size: 24px !important;
+  }
 }
 .about-photo p {
   font-family: var(--font-family);
@@ -6567,8 +6610,18 @@ body.stop-scrolling {
   align-items: center;
   gap: 32px;
 }
+@media (max-width: 567px) {
+  .about-photo__slider-bottom {
+    position: relative;
+  }
+}
 .about-photo__slider .swiper-wrapper {
   margin-bottom: 1vw;
+}
+@media (max-width: 567px) {
+  .about-photo__slider .swiper-wrapper {
+    margin-bottom: 16px;
+  }
 }
 .about-photo__slider .swiper-slide {
   height: auto;
@@ -6587,6 +6640,13 @@ body.stop-scrolling {
 .about-photo__button {
   display: flex;
   gap: 24px;
+}
+@media (max-width: 567px) {
+  .about-photo__button {
+    position: absolute;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 .about-photo__button-prev {
   cursor: pointer;
@@ -6799,6 +6859,11 @@ body.stop-scrolling {
 @media (max-width: 767px) {
   .about-photo__pagination {
     font-size: 33px;
+  }
+}
+@media (max-width: 567px) {
+  .about-photo__pagination {
+    justify-content: center;
   }
 }
 .about-photo__pagination .swiper-pagination-bullet {
@@ -7039,7 +7104,7 @@ body.stop-scrolling {
   font-size: 56px;
   line-height: 100%;
   color: var(--1);
-  max-width: 550px;
+  max-width: 800px;
 }
 @media (max-width: 700px) {
   .reviews-hero h2 {
@@ -7784,6 +7849,19 @@ body.stop-scrolling {
 .article-video .video.visible {
   opacity: 1;
   transition: 1s ease;
+}
+.article-img {
+  padding-bottom: 24px;
+}
+@media (max-width: 567px) {
+  .article-img {
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 467px) {
+  .article-img {
+    padding-bottom: 12px;
+  }
 }
 @media (max-width: 700px) {
   .article-also {
@@ -11223,6 +11301,11 @@ section {
   text-transform: uppercase;
   color: var(--black);
 }
+@media (max-width: 567px) {
+  .team h4 {
+    font-weight: bold;
+  }
+}
 @media (max-width: 700px) {
   .team {
     padding-top: 40px;
@@ -11508,6 +11591,7 @@ section {
 }
 .team-description__name .ui-button-primary {
   height: fit-content;
+  font-weight: bold;
 }
 @media (max-width: 1099px) {
   .team-description__name .ui-button-primary {
@@ -11807,6 +11891,11 @@ section {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+@media (max-width: 567px) {
+  .idea ul {
+    padding: 0 0 0 24px;
+  }
 }
 .idea ul li {
   font-family: var(--font-family);

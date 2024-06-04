@@ -2791,6 +2791,11 @@ section {
 		font-size: 56px;
 		text-transform: uppercase;
 		color: var(--black);
+
+		@media (max-width:567px) {
+			font-weight: bold;
+		}
+		
 	}
 
 	@media (max-width:700px) {
@@ -3118,6 +3123,7 @@ section {
 
 			.ui-button-primary {
 				height: fit-content;
+				font-weight: bold;
 
 				@media (max-width:1099px) {
 					font-size: 12px !important;
@@ -3470,6 +3476,11 @@ section {
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
+
+		@media (max-width:567px) {
+			padding: 0 0 0 24px;
+		}
+		
 		li {
 			font-family: var(--font-family);
 			font-weight: 500;
