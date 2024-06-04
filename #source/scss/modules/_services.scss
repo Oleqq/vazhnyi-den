@@ -224,13 +224,13 @@
             &:hover {
                 transition: .2s ease;
                 background: var(--black);
-                color: var(--golden-light-golden);
+                color: #e8ca44;
 
                 svg {
                     transition: .2s ease;
                     path {
                         transition: .2s ease;
-                        fill: #E7B012; 
+                        fill: #e8ca44; 
                     }
                }
 
@@ -242,7 +242,7 @@
 
             &.active {
                background: var(--black);
-               color: var(--golden-light-golden);
+               color: #e8ca44;
         
                 @media (max-width:1440px) {
                     // order: 1;
@@ -252,7 +252,7 @@
                     transition: .2s ease;
                     path {
                         transition: .2s ease;
-                        fill: #E7B012; 
+                        fill: #e8ca44;     
                         
                     }
                }

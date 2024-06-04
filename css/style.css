@@ -2626,14 +2626,14 @@ html {
 .services-tabs__tab:hover {
   transition: 0.2s ease;
   background: var(--black);
-  color: var(--golden-light-golden);
+  color: #e8ca44;
 }
 .services-tabs__tab:hover svg {
   transition: 0.2s ease;
 }
 .services-tabs__tab:hover svg path {
   transition: 0.2s ease;
-  fill: #E7B012;
+  fill: #e8ca44;
 }
 .services-tabs__tab:hover::after {
   opacity: 1;
@@ -2641,14 +2641,14 @@ html {
 }
 .services-tabs__tab.active {
   background: var(--black);
-  color: var(--golden-light-golden);
+  color: #e8ca44;
 }
 .services-tabs__tab.active svg {
   transition: 0.2s ease;
 }
 .services-tabs__tab.active svg path {
   transition: 0.2s ease;
-  fill: #E7B012;
+  fill: #e8ca44;
 }
 .services-tabs__tab.active::after {
   content: "";
