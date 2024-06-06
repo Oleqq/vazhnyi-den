@@ -5129,6 +5129,7 @@ html {
   position: relative;
   transition: 1s ease;
   overflow: hidden;
+  cursor: default;
 }
 .services-ideas__card:hover {
   transition: 1s ease;
