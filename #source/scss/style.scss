@@ -22,8 +22,7 @@
 
 @import "modules/calculator";
 
-
-
+@import "modules/popup";
 
 
 // стили хлебных крошек
@@ -188,7 +187,12 @@
 
   }
 
+body {
 
+	&.fixed {
+		position: fixed;
+	}
+}
 
 .container {
 	max-width: 1440px;

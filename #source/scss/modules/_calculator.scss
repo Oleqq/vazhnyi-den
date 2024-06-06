@@ -176,6 +176,7 @@
 
         &__wrapper {
             display: flex;
+            justify-content: space-between;
             gap: 32px;
 
             @media (max-width:1440px) {
@@ -287,6 +288,7 @@
 
 
 .calculator-stage__form {
+    flex: 1;
     .form {
         
         // width: 100%;
@@ -551,6 +553,114 @@
 }
 
 
+
+.calculator-stage__buttons {
+
+    margin-top: 32px;
+
+    &--wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width:676px) {
+            flex-direction: column-reverse;
+            gap: 16px;
+            padding-bottom: 124px;
+        }
+
+        .ui-button-primary {
+            height: fit-content;
+
+            @media (max-width:676px) {
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                padding: 24px ;
+            }
+            @media (max-width:500px) {
+                font-size: 18px;
+                padding: 20px 12px;
+            }
+            @media (max-width:390px) {
+                font-size: 16px;
+                padding: 16px 12px;
+            }
+        }
+    }
+
+    &--right {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+
+        .ui-button-primary {
+            background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+            color: #000;
+            -webkit-text-fill-color: unset;
+           
+
+            @media (max-width:676px) {
+                width: 100%;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                padding: 24px ;
+            }
+            @media (max-width:500px) {
+                font-size: 18px;
+                padding: 20px 12px;
+            }
+            @media (max-width:390px) {
+                font-size: 16px;
+                padding: 16px 12px;
+            }
+        }
+
+    }
+
+
+    &-result {
+        background: #303030;
+        padding: 24px 34px;
+
+        font-family: var(--font-family);
+        font-weight: 700;
+        font-size: 22px;
+
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width:676px) {
+            width: -webkit-fill-available;
+            padding: 24px;
+        }
+        @media (max-width:500px) {
+            font-size: 18px;
+            padding: 20px 12px;
+        }
+        @media (max-width:435px) {
+            font-size: 16px;
+        }
+        @media (max-width:390px) {
+            font-size: 16px;
+            padding: 16px 12px;
+        }
+
+        span {
+            background: linear-gradient(90deg, #c2a959 0%, #f9efb4 48.33%, #c2a959 98.16%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            text-align: center;
+        }
+    }
+}
 
 
 .select-box.active {

@@ -27,6 +27,41 @@
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const openFormButton = document.querySelector('.ui-button-primary');
+  const popupForm = document.getElementById('popupForm');
+  const closeFormButton = document.getElementById('closeForm');
+  const cancelFormButton = document.getElementById('cancelForm');
+  const tabs = document.querySelectorAll('.popup-form__tab');
+  const forms = document.querySelectorAll('.popup-form__form');
+  
+  function openPopup() {
+      popupForm.style.display = 'flex';
+      document.body.classList.add('fixed');
+  }
+
+  function closePopup() {
+      popupForm.style.display = 'none';
+      document.body.classList.remove('fixed');
+  }
+
+  openFormButton.addEventListener('click', openPopup);
+  
+  closeFormButton.addEventListener('click', closePopup);
+  
+  cancelFormButton.addEventListener('click', closePopup);
+  
+  tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+          tabs.forEach(t => t.classList.remove('active'));
+          forms.forEach(f => f.style.display = 'none');
+          
+          e.target.classList.add('active');
+          const selectedForm = document.getElementById(e.target.dataset.tab);
+          selectedForm.style.display = 'flex';
+      });
+  });
+});
 
 
 
