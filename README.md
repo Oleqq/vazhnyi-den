@@ -5,6 +5,11 @@
 
 Страницы проекта
 
+<a href="https://vazhnyi-den.vercel.app/popup.html">
+  Поп-ап окнок
+</a>
+<br>
+<br>
 <a href="https://vazhnyi-den.vercel.app/">
   Главная
 </a>
