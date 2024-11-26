@@ -1,7 +1,9 @@
 # vazhnyi-den
  Front-end Разработка для сайта "Важный День"
 
+<b>Финальный сайт проекта:</b> https://wed-importantday.ru/
 
+DEMO at VERCEL https://vazhnyi-den.vercel.app
 
 Страницы проекта
 
